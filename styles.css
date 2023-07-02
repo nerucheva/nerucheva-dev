@@ -30,6 +30,14 @@
 
 * {
   font-family: "PT SANS", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(43, 43, 43);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-bottom: 50px;
 }
 
 a {
@@ -37,8 +45,30 @@ a {
   color: rgb(73, 93, 170);
 }
 
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+h3 {
+  font-size: 22px;
+  padding: 8px 0;
+  border-top: 3px solid rgb(43, 43, 43);
+  border-bottom: 2px solid rgb(221, 221, 221);
+}
+
 .container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -54,7 +84,10 @@ a {
 .header-content {
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
 }
+
+.subtitle {}
 
 .graphics {
   display: flex;
@@ -64,4 +97,69 @@ a {
 .photo {
   width: 200px;
   height: auto;
+}
+
+.main-info {
+  padding-top: 20px;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  line-height: 22px;
+}
+
+.info-section:first-child {
+  padding-top: 0;
+}
+
+.info-section-title {
+  margin-bottom: 4px;
+}
+
+.label {
+  color: rgb(125, 125, 125);
+}
+
+.skills {
+  padding-top: 16px;
+}
+
+.skills-list-wrapper {
+  overflow: hidden;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding: 20px 0;
+  margin-left: -23px;
+}
+
+.skills-list li {
+  display: flex;
+}
+
+.skills-list li:before {
+  content: '•';
+  color: rgb(172, 172, 172);
+  display: block;
+  margin: 0 8px;
+}
+
+.experience {}
+
+.position {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.period {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 200px;
 }
