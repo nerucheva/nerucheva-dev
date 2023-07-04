@@ -303,13 +303,13 @@ button:hover {
   padding: 0;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .period {
     width: 100px;
   }
 }
 
-@media all and (max-width: 660px) {
+@media screen and (max-width: 660px) {
   .photo {
     width: 180px;
   }
@@ -336,7 +336,7 @@ button:hover {
   }
 }
 
-@media all and (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .header-content {
     flex-direction: column;
     align-items: flex-start;
@@ -355,5 +355,21 @@ button:hover {
     display: block;
     width: 180px;
     margin-top: 20px;
+  }
+}
+
+@media print {
+
+  .language-bar,
+  .button-block {
+    display: none;
+  }
+
+  .about-me h3 {
+    margin-top: 20px;
+  }
+
+  .non-breakable {
+    page-break-inside: avoid;
   }
 }
