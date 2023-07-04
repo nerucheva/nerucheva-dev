@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tatiana Nerucheva – Frontend-разработчица</title>
@@ -17,9 +18,9 @@
     <div class="header-content">
       <div>
         <h1>Татьяна Неручева</h1>
-        <h2 class="subtitle">Frontend-разработчица, CSS-инженер</h2>
-        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva">
-        <div class="main-info">
+        <h2>Frontend-разработчица, CSS-инженер</h2>
+        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+        <div class="general-info">
           <div class="info-section">
             <h5 class="info-section-title">Местоположение</h5>
             <span><span class="label">Проживание:</span> Черногория, Тиват</span>
@@ -44,7 +45,7 @@
         </div>
       </div>
 
-      <div class="graphics">
+      <div class="photo-and-btn">
         <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva">
         <div class="button-block">
           <div class="tooltip">
@@ -52,7 +53,7 @@
             <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как PDF, выбрав «Сохранить
               как PDF» в поле выбра принтера</div>
           </div>
-          <button type="button" onclick="window.print()">Скачать PDF</button>
+          <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
         </div>
       </div>
     </div>
@@ -60,8 +61,8 @@
   <main class="container">
     <section class="skills">
       <h3>Профессиональные навыки</h3>
-      <div class="skills-list-wrapper">
-        <ul class="skills-list">
+      <div class="skills__list-wrapper">
+        <ul class="skills__list list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
@@ -76,16 +77,16 @@
       </div>
     </section>
 
-    <section class="experience">
+    <section>
       <h3>Опыт работы</h3>
 
       <div class="position-info">
-        <span class="period period__desktop">Август 2022 – По наст. время <span>11 месяцев</span></span>
+        <span class="period period_desktop">Август 2022 – По наст. время <span>11 месяцев</span></span>
 
         <div class="details">
-          <span class="company-name">Pixel Point</span>
+          <span class="company">Pixel Point</span>
           <span class="position">Frontend-разработчица</span>
-          <span class="period period__mobile">Август 2022 – По наст. время <span>(11 месяцев)</span></span>
+          <span class="period period_mobile">Август 2022 – По наст. время <span>(11 месяцев)</span></span>
 
           <p>Участвую в разработке сайтов для ряда технологических компаний с использованием Gatsby, Next.js и Tailwind.
           </p>
@@ -93,43 +94,49 @@
             кроссбраузерной верстки, добавление новой функциональности и интеграция страниц с CMS. Принимала участие в
             корпоративных хакатонах.</p>
 
-          <p><strong><a href="https://isovalent.com/">Isovalent</a></strong> – занимается разработкой open-source ПО и
+          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> – занимается разработкой open-source
+            ПО и
             корпоративных решений, флагманская технология компании – Cilium – используется Google, GitLab, Adobe.</p>
 
           <p>Занимаюсь разработкой <a href="https://isovalent.com/resource-library/">библиотеки ресурсов</a>, системы
             поиска и фильтров для нее. Разрабатываю новые шаблоны страниц, улучшаю существующие, занимаюсь технической
             поддержкой клиента. Также работаю над сайтами дочерних продуктов компании:</p>
 
-          <ul class="details-list">
-            <li><strong><a href="https://ebpf.io/">eBPF</a></strong> – технология, которая позволяет запускать
+          <ul class="list details-list">
+            <li><a class="bold" href="https://ebpf.io/">eBPF</a> – технология, которая позволяет
+              запускать
               произвольный код
               пользователя в рамках ядра.</li>
-            <li><strong><a href="https://cilium.io/">Cilium</a></strong> – open source проект, который обеспечивает
+            <li><a class="bold" href="https://cilium.io/">Cilium</a> – open source проект, который
+              обеспечивает
               сетевые,
               безопасностные и мониторинговые функции для облачных сред, включая Kubernetes и другие платформы
               оркестрации контейнеров.</li>
-            <li><strong><a href="https://tetragon.cilium.io/docs/">Tetragon docs</a></strong> – документация для
+            <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> –
+              документация для
               компонента Cilium на
               базе eBPF, который позволяет в реальном времени наблюдать за безопасностью и контролировать выполнение
               программного обеспечения.</li>
           </ul>
 
-          <p><strong><a href="https://configu.com/">Configu</a></strong> – платформа управления конфигурацией E2E
+          <p><a class="bold" href="https://configu.com/">Configu</a> – платформа управления
+            конфигурацией E2E
             приложений.
             Я участвовала в подготовке проекта к релизу, имплементировала анимации, разрабатывала раздел документации.
           </p>
 
-          <p><strong><a href="https://www.fonoa.com/">Fonoa</a></strong> – платформа автоматизации налогообложения,
+          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> – платформа автоматизации
+            налогообложения,
             упрощающая управление
             налогами по всему миру. Я участвовала в подготовке проекта к релизу, разрабатывала раздел Products.</p>
 
-          <p>Также работала над проектами <strong><a href="https://www.revenuecat.com/">RevenueCat</a></strong> и
-            <strong><a href="https://neon.tech/">Neon</a></strong>.
+          <p>Также работала над проектами <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a> и
+            <a class="bold" href="https://neon.tech/">Neon</a>.
           </p>
 
           <span class="info-subtitle">Используемые навыки</span>
-          <div class="skills-list-wrapper">
-            <ul class="skills-list">
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
               <li>Gatsby</li>
               <li>Next.js</li>
               <li>JavaScript</li>
@@ -147,36 +154,39 @@
       </div>
 
       <div class="position-info">
-        <span class="period period__desktop">Май 2021-Август 2022 <span>1 год и 4 месяца</span></span>
+        <span class="period period_desktop">Май 2021-Август 2022 <span>1 год и 4 месяца</span></span>
 
         <div class="details">
-          <span class="company-name">JSNAKE</span>
+          <span class="company">JSNAKE</span>
           <span class="position">Frontend-разработчица</span>
-          <span class="period period__mobile">Май 2021-Август 2022 <span>(1 год и 4 месяца)</span></span>
+          <span class="period period_mobile">Май 2021-Август 2022 <span>(1 год и 4 месяца)</span></span>
 
           <p>Работала над несколькими проектами:</p>
 
-          <p><strong><a href="https://sammy.expert/">Sammy</a></strong> – собственный проект JSnake, система
+          <p><a class="bold" href="https://sammy.expert/">Sammy</a> – собственный проект JSnake,
+            система
             онлайн-бронирования для
             специалистов в области красоты. Отвечала за качество верстки, участвовала в разработке web-версии и
             мобильного приложения под Android и iOS, поддерживала дизайн-систему проекта в Storybook, занималась
             интернационализацией, проектировала типы и дизайн API компонентов, занималась улучшением пользовательского
             опыта.</p>
 
-          <p><strong><a href="https://lovefromyours.com/">Yours</a></strong> – косметический бренд из Кремниевой долины.
+          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> – косметический бренд из
+            Кремниевой долины.
             Занималась
             разработкой новой функциональности, участвовала во внедрении atomic design, поддерживала дизайн-систему
             проекта в Storybook, принимала участие в миграции проекта на Type Script, занималась интернационализацией и
             улучшением пользовательского опыта.</p>
 
-          <p><strong><a href="https://betterlegal.com/">BetterLegal</a></strong> – стартап из Техаса, который позволяет
+          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> – стартап из Техаса,
+            который позволяет
             автоматизировать
             создание юридического лица в Соединенных Штатах. Верстала элементы интерфейса, работала над базой знаний
             проекта, исправляла баги.</p>
 
           <span class="info-subtitle">Используемые навыки</span>
-          <div class="skills-list-wrapper">
-            <ul class="skills-list">
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React</li>
@@ -193,18 +203,18 @@
       </div>
 
       <div class="position-info">
-        <span class="period period__desktop">Июнь 2020-Май 2021 <span>1 год</span></span>
+        <span class="period period_desktop">Июнь 2020-Май 2021 <span>1 год</span></span>
 
         <div class="details non-breakable">
-          <span class="company-name">Freelance</span>
+          <span class="company">Freelance</span>
           <span class="position">Frontend-разработчица</span>
-          <span class="period period__mobile">Июнь 2020-Май 2021 <span>(1 год)</span></span>
+          <span class="period period_mobile">Июнь 2020-Май 2021 <span>(1 год)</span></span>
 
           <p>Занималась версткой адаптивных лендингов и созданием маркетинговых материалов.</p>
 
           <span class="info-subtitle">Используемые навыки</span>
-          <div class="skills-list-wrapper">
-            <ul class="skills-list">
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
               <li>HTML</li>
               <li>CSS</li>
               <li>SCSS</li>
@@ -223,8 +233,8 @@
 
     <section class="about-me">
       <h3>Обо мне</h3>
-      <p class="info-subtitle">Frontend-разработчица и CSS-инженер</p>
-      <p>Frontend-разработчица с уклоном в верстку. Уверенно и чисто верстаю, уделяю внимание семантике и адаптивности,
+      <p class="info-subtitle">Frontend-разработчица с уклоном в верстку</p>
+      <p>Уверенно и чисто верстаю, уделяю внимание семантике и адаптивности,
         придерживаюсь БЭМ и
         atomic design, работаю с анимациями. Превращаю дизайн из Figma в адаптивные и отзывчивые
         компоненты, поддерживаю порядок в дизайн-системе c помощью Storybook. Работаю с Jira,
@@ -234,7 +244,7 @@
 
 
       <span class="info-subtitle">Владею языками:</span>
-      <ul class="details-list">
+      <ul class="list details-list">
         <li>Английский — B2</li>
         <li>Сербо-хорватский — С1</li>
       </ul>

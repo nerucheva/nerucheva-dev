@@ -7,52 +7,51 @@
 
 @font-face {
   font-family: "PT SANS";
-  src: url("./assets/fonts/PTSans-Italic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "PT SANS";
   src: url("./assets/fonts/PTSans-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 
-@font-face {
-  font-family: "PT SANS";
-  src: url("./assets/fonts/PTSans-BoldItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 700;
+:root {
+  --BLACK: rgb(43, 43, 43);
+  --BLUE: rgb(73, 93, 170);
+  --BLUE-LIGHT: rgb(114, 135, 220);
+  --GRAY-DARK: rgb(125, 125, 125);
+  --GRAY-MEDIUM: rgb(172, 172, 172);
+  --GRAY: rgb(221, 221, 221);
+  --GRAY-LIGHT: rgb(241 241 241);
+  --WHITE: rgb(255, 255, 255);
+
+  --FS-14: 14px;
+  --FS-16: 16px;
+  --FS-18: 18px;
+  --FS-22: 22px;
+  --FS-36: 36px;
 }
 
 /* ********************************* */
 
 * {
   font-family: "PT SANS", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: rgb(43, 43, 43);
+  font-size: var(--FS-16);
+  color: var(--BLACK);
   margin: 0;
   padding: 0;
 }
 
-body {
-  padding-bottom: 30px;
-}
-
 main {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 a {
   text-decoration: none;
-  color: rgb(73, 93, 170);
+  color: var(--BLUE);
   transition: color 0.2s;
 }
 
 a:hover,
 a:focus {
-  color: rgb(114, 135, 220);
+  color: var(--BLUE-LIGHT);
 }
 
 p,
@@ -65,36 +64,41 @@ li {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: var(--FS-36);
   line-height: 1;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: var(--FS-18);
   font-weight: 400;
   margin-top: 8px;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: var(--FS-22);
   padding: 8px 0;
-  border-top: 3px solid rgb(43, 43, 43);
-  border-bottom: 2px solid rgb(221, 221, 221);
+  border-top: 3px solid var(--BLACK);
+  border-bottom: 2px solid var(--GRAY);
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .language-bar {
   padding: 10px 0;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-bottom: 2px solid var(--GRAY);
 }
 
 .language-bar span {
-  color: rgb(125, 125, 125);
+  color: var(--GRAY-DARK);
 }
 
 .header-content {
@@ -103,9 +107,7 @@ h3 {
   padding-top: 40px;
 }
 
-.subtitle {}
-
-.graphics {
+.photo-and-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,7 +125,7 @@ h3 {
 
 .button-block {
   position: relative;
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 .tooltip {
@@ -136,30 +138,30 @@ h3 {
 
 .tooltip__icon {
   display: block;
-  font-size: 14px;
-  line-height: 1;
   width: 20px;
   height: 20px;
   box-sizing: border-box;
-  border-radius: 50%;
+  font-size: var(--FS-14);
+  line-height: 1;
   padding-top: 2px;
   padding-left: 6px;
-  background-color: white;
-  border: 1px solid rgb(43, 43, 43);
+  border: 1px solid var(--BLACK);
+  border-radius: 50%;
+  background-color: var(--WHITE);
   cursor: pointer;
 }
 
 .tooltop__text {
   position: absolute;
-  opacity: 0;
-  transition: 0.2s;
   z-index: -1;
   right: 18px;
-  font-size: 14px;
   width: 250px;
   padding: 10px;
-  background-color: rgb(241 241 241);
+  font-size: var(--FS-14);
+  background-color: var(--GRAY-LIGHT);
   border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s;
 }
 
 .tooltip:hover .tooltop__text {
@@ -167,22 +169,23 @@ h3 {
   opacity: 1;
 }
 
-button {
+.pdf-button {
+  min-width: 140px;
   appearance: none;
-  border: 1px solid rgb(43, 43, 43);
-  opacity: border-color 0.2s, color 0.2s;
+  padding: 10px 14px;
   background-color: transparent;
-  padding: 10px;
+  border: 1px solid var(--BLACK);
   border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
   cursor: pointer;
 }
 
-button:hover {
-  border-color: rgb(73, 93, 170);
-  color: rgb(73, 93, 170);
+.pdf-button:hover {
+  color: var(--BLUE);
+  border-color: var(--BLUE);
 }
 
-.main-info {
+.general-info {
   padding-top: 20px;
 }
 
@@ -202,18 +205,23 @@ button:hover {
 }
 
 .label {
-  color: rgb(125, 125, 125);
+  color: var(--GRAY-DARK);
+}
+
+.list li:before {
+  content: '•';
+  color: var(--GRAY-MEDIUM);
 }
 
 .skills {
   padding-top: 30px;
 }
 
-.skills-list-wrapper {
+.skills__list-wrapper {
   overflow: hidden;
 }
 
-.skills-list {
+.skills__list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -221,20 +229,16 @@ button:hover {
   margin-left: -23px;
 }
 
-.skills-list li {
+.skills__list li {
   display: flex;
   margin-top: 4px;
   margin-bottom: 0;
 }
 
-.skills-list li:before {
-  content: '•';
-  color: rgb(172, 172, 172);
+.skills__list li:before {
   display: block;
   margin: 0 8px;
 }
-
-.experience {}
 
 .position-info {
   display: flex;
@@ -246,10 +250,6 @@ button:hover {
   margin: 20px 0;
 }
 
-/* .position-info:last-of-type {
-  margin-bottom: 20px;
-} */
-
 .period {
   display: flex;
   flex-direction: column;
@@ -259,11 +259,11 @@ button:hover {
 
 .period span {
   display: block;
-  color: rgb(172, 172, 172);
+  color: var(--GRAY-MEDIUM);
   margin-top: 2px;
 }
 
-.period__mobile {
+.period_mobile {
   display: none;
 }
 
@@ -276,15 +276,13 @@ button:hover {
 }
 
 .details-list li:before {
-  content: '•';
-  color: rgb(172, 172, 172);
   display: inline;
   margin-right: 10px;
   margin-left: -18px;
 }
 
-.company-name {
-  font-size: 22px;
+.company {
+  font-size: var(--FS-22);
   font-weight: 700;
 }
 
@@ -299,7 +297,7 @@ button:hover {
   margin: 20px 0 2px;
 }
 
-.details .skills-list {
+.details .skills__list {
   padding: 0;
 }
 
@@ -310,6 +308,11 @@ button:hover {
 }
 
 @media screen and (max-width: 660px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .photo {
     width: 180px;
   }
@@ -326,11 +329,11 @@ button:hover {
     display: inline;
   }
 
-  .period__desktop {
+  .period_desktop {
     display: none;
   }
 
-  .period__mobile {
+  .period_mobile {
     display: block;
     margin-bottom: 20px;
   }
@@ -347,7 +350,7 @@ button:hover {
     top: -79px;
   }
 
-  .graphics .photo {
+  .photo-and-btn .photo {
     display: none;
   }
 

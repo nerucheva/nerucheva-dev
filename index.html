@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tatiana Nerucheva – frontend developer</title>
@@ -17,9 +18,9 @@
     <div class="header-content">
       <div>
         <h1>Tatiana Nerucheva</h1>
-        <h2 class="subtitle">Frontend developer, CSS-ingeneer</h2>
-        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva">
-        <div class="main-info">
+        <h2>Frontend developer, CSS-ingeneer</h2>
+        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+        <div class="general-info">
           <div class="info-section">
             <h5 class="info-section-title">Location</h5>
             <span><span class="label">Residence:</span> Montenegro, Tivat</span>
@@ -44,7 +45,7 @@
         </div>
       </div>
 
-      <div class="graphics">
+      <div class="photo-and-btn">
         <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva">
         <div class="button-block">
           <div class="tooltip">
@@ -52,7 +53,7 @@
             <div class="tooltop__text">You may print this page or download it as PDF by choosing «Save as PDF» in the
               "printer" select</div>
           </div>
-          <button type="button" onclick="window.print()">Download as PDF</button>
+          <button class="pdf-button" type="button" onclick="window.print()">Download as PDF</button>
         </div>
       </div>
     </div>
@@ -60,8 +61,8 @@
   <main class="container">
     <section class="skills">
       <h3>Professional skills</h3>
-      <div class="skills-list-wrapper">
-        <ul class="skills-list">
+      <div class="skills__list-wrapper">
+        <ul class="skills__list list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
@@ -76,16 +77,16 @@
       </div>
     </section>
 
-    <section class="experience">
+    <section>
       <h3>Experience</h3>
 
       <div class="position-info">
-        <span class="period period__desktop">August 2022 — Present <span>11 mos</span></span>
+        <span class="period period_desktop">August 2022 — Present <span>11 mos</span></span>
 
         <div class="details">
-          <span class="company-name">Pixel Point</span>
+          <span class="company">Pixel Point</span>
           <span class="position">Frontend developer</span>
-          <span class="period period__mobile">August 2022 — Present <span>(11 mos)</span></span>
+          <span class="period period_mobile">August 2022 — Present <span>(11 mos)</span></span>
 
           <p>I participate in website development for several technology companies using Gatsby, Next.js, and Tailwind.
           </p>
@@ -93,7 +94,7 @@
             layouts, adding new functionality, and integrating pages with CMS. I have participated in corporate
             hackathons.</p>
 
-          <p><strong><a href="https://isovalent.com/">Isovalent</a></strong> – specializes in the development of
+          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> – specializes in the development of
             open-source software and
             corporate solutions. The company's flagship technology, Cilium, is used by Google, GitLab, and Adobe.</p>
 
@@ -101,34 +102,34 @@
             search system, and filters for it. I develop new page templates, improve existing ones, and provide
             technical support to the client. I also work on websites for the company's subsidiary products:</p>
 
-          <ul class="details-list">
-            <li><strong><a href="https://ebpf.io/">eBPF</a></strong> – a technology that allows running arbitrary user
+          <ul class="list details-list">
+            <li><a class="bold" href="https://ebpf.io/">eBPF</a> – a technology that allows running arbitrary user
               code within the
               kernel.</li>
-            <li><strong><a href="https://cilium.io/">Cilium</a></strong> – an open-source project that provides
+            <li><a class="bold" href="https://cilium.io/">Cilium</a> – an open-source project that provides
               networking, security, and
               observability functions for cloud environments, including Kubernetes and other container orchestration
               platforms.</li>
-            <li><strong><a href="https://tetragon.cilium.io/docs/">Tetragon docs</a></strong> – documentation for the
+            <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> – documentation for the
               Cilium component
               based on eBPF, which allows real-time monitoring of security and software execution control.</li>
           </ul>
 
-          <p><strong><a href="https://configu.com/">Configu</a></strong> – an end-to-end application configuration
+          <p><a class="bold" href="https://configu.com/">Configu</a> – an end-to-end application configuration
             management platform.
             I participated in project release preparation, implemented animations, and developed the documentation
             section.</p>
 
-          <p><strong><a href="https://www.fonoa.com/">Fonoa</a></strong> – a tax automation platform that simplifies tax
+          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> – a tax automation platform that simplifies tax
             management
             worldwide. I participated in project release preparation and developed the Products section.</p>
 
-          <p>I also worked on the <strong><a href="https://www.revenuecat.com/">RevenueCat</a></strong> and <strong><a
-                href="https://neon.tech/">Neon</a></strong> projects.</p>
+          <p>I also worked on the <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a> and <a class="bold"
+              href="https://neon.tech/">Neon</a> projects.</p>
 
           <span class="info-subtitle">Skills</span>
-          <div class="skills-list-wrapper">
-            <ul class="skills-list">
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
               <li>Gatsby</li>
               <li>Next.js</li>
               <li>JavaScript</li>
@@ -146,34 +147,34 @@
       </div>
 
       <div class="position-info">
-        <span class="period period__desktop">May 2021 — August 2022 <span>1 yr 4 mos</span></span>
+        <span class="period period_desktop">May 2021 — August 2022 <span>1 yr 4 mos</span></span>
 
         <div class="details">
-          <span class="company-name">JSNAKE</span>
+          <span class="company">JSNAKE</span>
           <span class="position">Frontend developer</span>
-          <span class="period period__mobile">May 2021 — August 2022 <span>(1 yr 4 mos)</span></span>
+          <span class="period period_mobile">May 2021 — August 2022 <span>(1 yr 4 mos)</span></span>
 
           <p>I have worked on several projects.</p>
 
-          <p><strong><a href="https://sammy.expert/">Sammy</a></strong> – JSnake's own project, an online booking system
+          <p><a class="bold" href="https://sammy.expert/">Sammy</a> – JSnake's own project, an online booking system
             for beauty
             specialists. In this project, I wasresponsible for ensuring the quality of markup, participated in the
             development of the web version andmobile app (iOS and Android), supported the design system using Storybook,
             implemented internationalization, designed types and components API, and enhanced the user experience.</p>
 
-          <p><strong><a href="https://lovefromyours.com/">Yours</a></strong> – cosmetic brand from Silicon Valley. I
+          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> – cosmetic brand from Silicon Valley. I
             developed new
             functionality, took part in atomic design embedding, supported a design system of the project with
             Storybook, implemented internationalization, and enhanced the user experience.</p>
 
-          <p><strong><a href="https://betterlegal.com/">BetterLegal</a></strong> – a startup from Texas that offers
+          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> – a startup from Texas that offers
             automated creation of
             legal entities in the USA. In this project, I worked on markup for interface elements, worked on a knowledge
             base of the project, and resolved bugs.</p>
 
           <span class="info-subtitle">Skills</span>
-          <div class="skills-list-wrapper">
-            <ul class="skills-list">
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React</li>
@@ -190,18 +191,18 @@
       </div>
 
       <div class="position-info">
-        <span class="period period__desktop">June 2020 — May 2021 <span>1 yr</span></span>
+        <span class="period period_desktop">June 2020 — May 2021 <span>1 yr</span></span>
 
         <div class="details non-breakable">
-          <span class="company-name">Freelance</span>
+          <span class="company">Freelance</span>
           <span class="position">Frontend developer</span>
-          <span class="period period__mobile">June 2020 — May 2021 <span>(1 yr)</span></span>
+          <span class="period period_mobile">June 2020 — May 2021 <span>(1 yr)</span></span>
 
           <p>I created markup for responsive landing pages and marketing materials.</p>
 
           <span class="info-subtitle">Skills</span>
-          <div class="skills-list-wrapper">
-            <ul class="skills-list">
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
               <li>HTML</li>
               <li>CSS</li>
               <li>SCSS</li>
@@ -228,7 +229,7 @@
       <p>I love Git, know SASS and CSS modules, Bootstrap, React, and CRA and I study React Native and TypeScript.</p>
 
       <span class="info-subtitle">Languages</span>
-      <ul class="details-list">
+      <ul class="list details-list">
         <li>English — B2</li>
         <li>Serbo-Croatian — С1</li>
       </ul>
