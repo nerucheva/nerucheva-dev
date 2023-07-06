@@ -2,11 +2,15 @@
 <html lang="ru">
 
 <head>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/locale/ru.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/plugin/isBetween.js"></script>
+  <script defer src="./scripts.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tatiana Nerucheva – Frontend-разработчица</title>
+  <title>Tatiana Nerucheva — Frontend-разработчица</title>
 </head>
 
 <body>
@@ -19,19 +23,19 @@
       <div>
         <h1>Татьяна Неручева</h1>
         <h2>Frontend-разработчица, CSS-инженер</h2>
-        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="180" height="180">
         <div class="general-info">
           <div class="info-section">
             <h5 class="info-section-title">Местоположение</h5>
             <span><span class="label">Проживание:</span> Черногория, Тиват</span>
-            <span><span class="label">Готовность к работе:</span> готова к удаленной работе </span>
+            <span><span class="label">Готовность к&nbsp;работе:</span> готова к&nbsp;удаленной работе </span>
           </div>
 
           <div class="info-section">
-            <h5 class="info-section-title">Возраст и стаж</h5>
-            <span><span class="label">Стаж:</span> 3 года и 1 месяц</span>
-            <span><span class="label">Возраст:</span> 31 год </span>
-            <span><span class="label">Зарплатные ожидания:</span> от 2500$</span>
+            <h5 class="info-section-title">Возраст и&nbsp;стаж</h5>
+            <span><span class="label">Стаж: </span><span id="totalExp"></span></span>
+            <span><span class="label">Возраст: </span><span id="age" data-date-start="1992-01-15"></span></span>
+            <span><span class="label">Зарплатные ожидания:</span> от&nbsp;2500$</span>
           </div>
 
           <div class="info-section">
@@ -46,12 +50,12 @@
       </div>
 
       <div class="photo-and-btn">
-        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva">
+        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
         <div class="button-block">
           <div class="tooltip">
             <span class="tooltip__icon">?</span>
-            <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как PDF, выбрав «Сохранить
-              как PDF» в поле выбра принтера</div>
+            <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
+              «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
           </div>
           <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
         </div>
@@ -80,58 +84,51 @@
     <section>
       <h3>Опыт работы</h3>
 
-      <div class="position-info">
-        <span class="period period_desktop">Август 2022 – По наст. время <span>11 месяцев</span></span>
+      <div class="position-info" data-date-start="2022-08-01">
+        <time class="period period_desktop"></time>
 
         <div class="details">
           <span class="company">Pixel Point</span>
           <span class="position">Frontend-разработчица</span>
-          <span class="period period_mobile">Август 2022 – По наст. время <span>(11 месяцев)</span></span>
+          <time class="period period_mobile"></time>
 
-          <p>Участвую в разработке сайтов для ряда технологических компаний с использованием Gatsby, Next.js и Tailwind.
+          <p>Участвую в&nbsp;разработке сайтов для&nbsp;ряда технологических компаний с&nbsp;использованием Gatsby,
+            Next.js и&nbsp;Tailwind.
           </p>
           <p>Важную часть моей работы составляет разработка интерфейсов, создание качественной адаптивной
-            кроссбраузерной верстки, добавление новой функциональности и интеграция страниц с CMS. Принимала участие в
-            корпоративных хакатонах.</p>
+            кроссбраузерной верстки, добавление новой функциональности и&nbsp;интеграция страниц с&nbsp;CMS. Принимала
+            участие в&nbsp;корпоративных хакатонах.</p>
 
-          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> – занимается разработкой open-source
+          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> — занимается разработкой open-source
             ПО и
-            корпоративных решений, флагманская технология компании – Cilium – используется Google, GitLab, Adobe.</p>
+            корпоративных решений, флагманская технология компании — Cilium — используется Google, GitLab, Adobe.</p>
 
           <p>Занимаюсь разработкой <a href="https://isovalent.com/resource-library/">библиотеки ресурсов</a>, системы
-            поиска и фильтров для нее. Разрабатываю новые шаблоны страниц, улучшаю существующие, занимаюсь технической
-            поддержкой клиента. Также работаю над сайтами дочерних продуктов компании:</p>
+            поиска и&nbsp;фильтров для&nbsp;нее. Разрабатываю новые шаблоны страниц, улучшаю существующие, занимаюсь
+            технической поддержкой клиента. Также работаю над&nbsp;сайтами дочерних продуктов компании:</p>
 
           <ul class="list details-list">
-            <li><a class="bold" href="https://ebpf.io/">eBPF</a> – технология, которая позволяет
-              запускать
-              произвольный код
-              пользователя в рамках ядра.</li>
-            <li><a class="bold" href="https://cilium.io/">Cilium</a> – open source проект, который
-              обеспечивает
-              сетевые,
-              безопасностные и мониторинговые функции для облачных сред, включая Kubernetes и другие платформы
-              оркестрации контейнеров.</li>
+            <li><a class="bold" href="https://ebpf.io/">eBPF</a> — технология, которая позволяет
+              запускать произвольный код пользователя в&nbsp;рамках ядра.</li>
+            <li><a class="bold" href="https://cilium.io/">Cilium</a> — open source проект, который
+              обеспечивает сетевые, безопасностные и&nbsp;мониторинговые функции для&nbsp;облачных сред, включая
+              Kubernetes и&nbsp;другие платформы оркестрации контейнеров.</li>
             <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> –
-              документация для
-              компонента Cilium на
-              базе eBPF, который позволяет в реальном времени наблюдать за безопасностью и контролировать выполнение
-              программного обеспечения.</li>
+              документация для&nbsp;компонента Cilium на&nbsp;базе eBPF, который позволяет в&nbsp;реальном времени
+              наблюдать за&nbsp;безопасностью и&nbsp;контролировать выполнение программного обеспечения.</li>
           </ul>
 
-          <p><a class="bold" href="https://configu.com/">Configu</a> – платформа управления
-            конфигурацией E2E
-            приложений.
-            Я участвовала в подготовке проекта к релизу, имплементировала анимации, разрабатывала раздел документации.
+          <p><a class="bold" href="https://configu.com/">Configu</a> — платформа управления
+            конфигурацией E2E приложений. Я&nbsp;участвовала в&nbsp;подготовке проекта к&nbsp;релизу, имплементировала
+            анимации, разрабатывала раздел документации.
           </p>
 
-          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> – платформа автоматизации
-            налогообложения,
-            упрощающая управление
-            налогами по всему миру. Я участвовала в подготовке проекта к релизу, разрабатывала раздел Products.</p>
+          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> — платформа автоматизации налогообложения,
+            упрощающая управление налогами по&nbsp;всему миру. Я&nbsp;участвовала в&nbsp;подготовке проекта
+            к&nbsp;релизу, разрабатывала раздел Products.</p>
 
-          <p>Также работала над проектами <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a> и
-            <a class="bold" href="https://neon.tech/">Neon</a>.
+          <p>Также работала над&nbsp;проектами <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a>
+            и&nbsp;<a class="bold" href="https://neon.tech/">Neon</a>.
           </p>
 
           <span class="info-subtitle">Используемые навыки</span>
@@ -153,36 +150,31 @@
         </div>
       </div>
 
-      <div class="position-info">
-        <span class="period period_desktop">Май 2021-Август 2022 <span>1 год и 4 месяца</span></span>
+      <div class="position-info" data-date-start="2021-05-01" data-date-end="2022-08-01">
+        <time class="period period_desktop"></time>
 
         <div class="details">
           <span class="company">JSNAKE</span>
           <span class="position">Frontend-разработчица</span>
-          <span class="period period_mobile">Май 2021-Август 2022 <span>(1 год и 4 месяца)</span></span>
+          <time class="period period_mobile"></time>
 
-          <p>Работала над несколькими проектами:</p>
+          <p>Работала над&nbsp;несколькими проектами:</p>
 
-          <p><a class="bold" href="https://sammy.expert/">Sammy</a> – собственный проект JSnake,
-            система
-            онлайн-бронирования для
-            специалистов в области красоты. Отвечала за качество верстки, участвовала в разработке web-версии и
-            мобильного приложения под Android и iOS, поддерживала дизайн-систему проекта в Storybook, занималась
-            интернационализацией, проектировала типы и дизайн API компонентов, занималась улучшением пользовательского
-            опыта.</p>
+          <p><a class="bold" href="https://sammy.expert/">Sammy</a> — собственный проект JSnake,
+            система онлайн-бронирования для&nbsp;специалистов в&nbsp;области красоты. Отвечала за качество верстки,
+            участвовала в&nbsp;разработке web-версии и&nbsp;мобильного приложения под Android и&nbsp;iOS, поддерживала
+            дизайн-систему проекта в&nbsp;Storybook, занималась интернационализацией, проектировала типы и&nbsp;дизайн
+            API компонентов, занималась улучшением пользовательского опыта.</p>
 
-          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> – косметический бренд из
-            Кремниевой долины.
-            Занималась
-            разработкой новой функциональности, участвовала во внедрении atomic design, поддерживала дизайн-систему
-            проекта в Storybook, принимала участие в миграции проекта на Type Script, занималась интернационализацией и
-            улучшением пользовательского опыта.</p>
+          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> — косметический бренд из&nbsp;Кремниевой
+            долины.
+            Занималась разработкой новой функциональности, участвовала во&nbsp;внедрении atomic design, поддерживала
+            дизайн-систему проекта в&nbsp;Storybook, принимала участие в&nbsp;миграции проекта на&nbsp;Type Script,
+            занималась интернационализацией и&nbsp;улучшением пользовательского опыта.</p>
 
-          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> – стартап из Техаса,
-            который позволяет
-            автоматизировать
-            создание юридического лица в Соединенных Штатах. Верстала элементы интерфейса, работала над базой знаний
-            проекта, исправляла баги.</p>
+          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> — стартап из&nbsp;Техаса, который позволяет
+            автоматизировать создание юридического лица в&nbsp;Соединенных Штатах. Верстала элементы интерфейса,
+            работала над&nbsp;базой знаний проекта, исправляла баги.</p>
 
           <span class="info-subtitle">Используемые навыки</span>
           <div class="skills__list-wrapper">
@@ -202,15 +194,15 @@
         </div>
       </div>
 
-      <div class="position-info">
-        <span class="period period_desktop">Июнь 2020-Май 2021 <span>1 год</span></span>
+      <div class="position-info" data-date-start="2020-06-01" data-date-end="2021-05-01">
+        <time class="period period_desktop"></time>
 
         <div class="details non-breakable">
           <span class="company">Freelance</span>
           <span class="position">Frontend-разработчица</span>
-          <span class="period period_mobile">Июнь 2020-Май 2021 <span>(1 год)</span></span>
+          <time class="period period_mobile"></time>
 
-          <p>Занималась версткой адаптивных лендингов и созданием маркетинговых материалов.</p>
+          <p>Занималась версткой адаптивных лендингов и&nbsp;созданием маркетинговых материалов.</p>
 
           <span class="info-subtitle">Используемые навыки</span>
           <div class="skills__list-wrapper">
@@ -233,15 +225,17 @@
 
     <section class="about-me">
       <h3>Обо мне</h3>
-      <p class="info-subtitle">Frontend-разработчица с уклоном в верстку</p>
-      <p>Уверенно и чисто верстаю, уделяю внимание семантике и адаптивности,
-        придерживаюсь БЭМ и
-        atomic design, работаю с анимациями. Превращаю дизайн из Figma в адаптивные и отзывчивые
-        компоненты, поддерживаю порядок в дизайн-системе c помощью Storybook. Работаю с Jira,
-        взаимодействую с клиентами на английском языке.</p>
+      <p class="info-subtitle">Frontend-разработчица с&nbsp;уклоном в&nbsp;верстку</p>
+      <p>Большое внимание в&nbsp;своей работе я&nbsp;уделяю созданию дружелюбных, понятных и&nbsp;отзывчивых
+        пользовательских интерфейсов. Тесно сотрудничаю с&nbsp;дизайн-отделом и&nbsp;верстаю полностью адаптивные
+        страницы даже в&nbsp;случаях, когда в&nbsp;макете не&nbsp;представлен дизайн для&nbsp;мобильных устройств.
+        Придерживаюсь подходов BAM, Atomic Design и&nbsp;Storybook Driven Development, это позволяет мне создавать
+        дизайн-системы, которые легко поддерживать и&nbsp;масштабировать.
+      </p>
 
-      <p> Люблю Git, знаю SASS и CSS modules, Bootstrap, React, CRA, изучаю React Native и TypeScript.</p>
-
+      <p>Обращаю внимание на&nbsp;детали и&nbsp;умею работать согласно техническим заданиям, имею опыт работы
+        в&nbsp;команде с&nbsp;англоязычными коллегами. Знаю Git, SASS, Tailwind и&nbsp;CSS-modules, React, имею опыт
+        создания анимаций, изучаю React Native и&nbsp;TypeScript.</p>
 
       <span class="info-subtitle">Владею языками:</span>
       <ul class="list details-list">
@@ -249,7 +243,7 @@
         <li>Сербо-хорватский — С1</li>
       </ul>
 
-      <p>Уже 6 лет живу в Черногории, релокацию не рассматриваю.</p>
+      <p>Уже 6 лет живу в&nbsp;Черногории, релокацию не&nbsp;рассматриваю.</p>
     </section>
   </main>
 </body>

@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "PT SANS";
-  src: url("./assets/fonts/PTSans-Regular.ttf") format("truetype");
+  font-family: 'PT SANS';
+  src: url('./assets/fonts/PTSans-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "PT SANS";
-  src: url("./assets/fonts/PTSans-Bold.ttf") format("truetype");
+  font-family: 'PT SANS';
+  src: url('./assets/fonts/PTSans-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
 }
@@ -32,7 +32,7 @@
 /* ********************************* */
 
 * {
-  font-family: "PT SANS", Arial, Helvetica, sans-serif;
+  font-family: 'PT SANS', Arial, Helvetica, sans-serif;
   font-size: var(--FS-16);
   color: var(--BLACK);
   margin: 0;
@@ -155,7 +155,7 @@ h3 {
   position: absolute;
   z-index: -1;
   right: 18px;
-  width: 250px;
+  width: 260px;
   padding: 10px;
   font-size: var(--FS-14);
   background-color: var(--GRAY-LIGHT);
@@ -170,9 +170,12 @@ h3 {
 }
 
 .pdf-button {
-  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 42px;
   appearance: none;
-  padding: 10px 14px;
   background-color: transparent;
   border: 1px solid var(--BLACK);
   border-radius: 2px;
@@ -254,7 +257,7 @@ h3 {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  width: 200px;
+  width: 206px;
 }
 
 .period span {
@@ -303,7 +306,7 @@ h3 {
 
 @media screen and (max-width: 900px) {
   .period {
-    width: 100px;
+    width: 106px;
   }
 }
 
@@ -362,7 +365,6 @@ h3 {
 }
 
 @media print {
-
   .language-bar,
   .button-block {
     display: none;

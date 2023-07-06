@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/plugin/isBetween.js"></script>
+  <script defer src="./scripts.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tatiana Nerucheva – frontend developer</title>
@@ -19,18 +22,18 @@
       <div>
         <h1>Tatiana Nerucheva</h1>
         <h2>Frontend developer, CSS-ingeneer</h2>
-        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="180" height="180">
         <div class="general-info">
           <div class="info-section">
             <h5 class="info-section-title">Location</h5>
             <span><span class="label">Residence:</span> Montenegro, Tivat</span>
-            <span><span class="label">Readiness for work:</span> ready for remote job </span>
+            <span><span class="label">Readiness for&nbsp;work:</span> ready for&nbsp;remote job </span>
           </div>
 
           <div class="info-section">
             <h5 class="info-section-title">Age and experience</h5>
-            <span><span class="label">Experience:</span> 3 years and 1 month</span>
-            <span><span class="label">Age:</span> 31 y.o. </span>
+            <span><span class="label">Experience: </span><span id="totalExp"></span></span>
+            <span><span class="label">Age: </span><span id="age" data-date-start="1992-01-15"></span></span>
             <span><span class="label">Salary expectations:</span> from $2500</span>
           </div>
 
@@ -46,12 +49,12 @@
       </div>
 
       <div class="photo-and-btn">
-        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva">
+        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
         <div class="button-block">
           <div class="tooltip">
             <span class="tooltip__icon">?</span>
-            <div class="tooltop__text">You may print this page or download it as PDF by choosing «Save as PDF» in the
-              "printer" select</div>
+            <div class="tooltop__text">You may print this page or&nbsp;download it as&nbsp;PDF by&nbsp;choosing «Save
+              as&nbsp;PDF» in the&nbsp;«printer» select</div>
           </div>
           <button class="pdf-button" type="button" onclick="window.print()">Download as PDF</button>
         </div>
@@ -80,52 +83,51 @@
     <section>
       <h3>Experience</h3>
 
-      <div class="position-info">
-        <span class="period period_desktop">August 2022 — Present <span>11 mos</span></span>
+      <div class="position-info" data-date-start="2022-08-01">
+        <time class="period period_desktop"></time>
 
         <div class="details">
           <span class="company">Pixel Point</span>
           <span class="position">Frontend developer</span>
-          <span class="period period_mobile">August 2022 — Present <span>(11 mos)</span></span>
+          <time class="period period_mobile"></time>
 
-          <p>I participate in website development for several technology companies using Gatsby, Next.js, and Tailwind.
+          <p>I&nbsp;participate in&nbsp;website development for&nbsp;several technology companies using Gatsby, Next.js,
+            and&nbsp;Tailwind.
           </p>
-          <p>An important part of my work is interface development, creating high-quality responsive cross-browser
-            layouts, adding new functionality, and integrating pages with CMS. I have participated in corporate
-            hackathons.</p>
+          <p>An&nbsp;important part of&nbsp;my work is interface development, creating high-quality responsive
+            cross-browser layouts, adding new functionality, and&nbsp;integrating pages with CMS. I&nbsp;have
+            participated in&nbsp;corporate hackathons.</p>
 
-          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> – specializes in the development of
-            open-source software and
-            corporate solutions. The company's flagship technology, Cilium, is used by Google, GitLab, and Adobe.</p>
+          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> – specializes in&nbsp;the development of
+            open-source software and&nbsp;corporate solutions. The company's flagship technology, Cilium, is used
+            by&nbsp;Google, GitLab, and&nbsp;Adobe.</p>
 
-          <p>I am involved in developing a <a href="https://isovalent.com/resource-library/">resource library</a>, a
-            search system, and filters for it. I develop new page templates, improve existing ones, and provide
-            technical support to the client. I also work on websites for the company's subsidiary products:</p>
+          <p>I&nbsp;am involved in&nbsp;developing a&nbsp;<a href="https://isovalent.com/resource-library/">resource
+              library</a>, a&nbsp;search system, and filters for&nbsp;it. I develop new page templates, improve existing
+            ones, and&nbsp;provide technical support to the&nbsp;client. I also work on websites for the&nbsp;company's
+            subsidiary products:</p>
 
           <ul class="list details-list">
-            <li><a class="bold" href="https://ebpf.io/">eBPF</a> – a technology that allows running arbitrary user
-              code within the
-              kernel.</li>
-            <li><a class="bold" href="https://cilium.io/">Cilium</a> – an open-source project that provides
-              networking, security, and
-              observability functions for cloud environments, including Kubernetes and other container orchestration
-              platforms.</li>
-            <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> – documentation for the
-              Cilium component
-              based on eBPF, which allows real-time monitoring of security and software execution control.</li>
+            <li><a class="bold" href="https://ebpf.io/">eBPF</a> – a&nbsp;technology that allows running arbitrary user
+              code within the&nbsp;kernel.</li>
+            <li><a class="bold" href="https://cilium.io/">Cilium</a> – an&nbsp;open-source project that provides
+              networking, security, and&nbsp;observability functions for&nbsp;cloud environments, including Kubernetes
+              and&nbsp;other container orchestration platforms.</li>
+            <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> – documentation for
+              the&nbsp;Cilium component based on&nbsp;eBPF, which allows real-time monitoring of&nbsp;security
+              and&nbsp;software execution control.</li>
           </ul>
 
-          <p><a class="bold" href="https://configu.com/">Configu</a> – an end-to-end application configuration
-            management platform.
-            I participated in project release preparation, implemented animations, and developed the documentation
-            section.</p>
+          <p><a class="bold" href="https://configu.com/">Configu</a> – an&nbsp;end-to-end application configuration
+            management platform. I&nbsp;participated in&nbsp;project release preparation, implemented animations,
+            and&nbsp;developed the&nbsp;documentation section.</p>
 
-          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> – a tax automation platform that simplifies tax
-            management
-            worldwide. I participated in project release preparation and developed the Products section.</p>
+          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> – a&nbsp;tax automation platform that simplifies
+            tax management worldwide. I&nbsp;participated in&nbsp;project release preparation and&nbsp;developed
+            the&nbsp;Products section.</p>
 
-          <p>I also worked on the <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a> and <a class="bold"
-              href="https://neon.tech/">Neon</a> projects.</p>
+          <p>I also worked on&nbsp;the <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a> and&nbsp;<a
+              class="bold" href="https://neon.tech/">Neon</a> projects.</p>
 
           <span class="info-subtitle">Skills</span>
           <div class="skills__list-wrapper">
@@ -146,31 +148,32 @@
         </div>
       </div>
 
-      <div class="position-info">
-        <span class="period period_desktop">May 2021 — August 2022 <span>1 yr 4 mos</span></span>
+      <div class="position-info" data-date-start="2021-05-01" data-date-end="2022-08-01">
+        <time class="period period_desktop"></time>
 
         <div class="details">
           <span class="company">JSNAKE</span>
           <span class="position">Frontend developer</span>
-          <span class="period period_mobile">May 2021 — August 2022 <span>(1 yr 4 mos)</span></span>
+          <time class="period period_mobile"></time>
 
           <p>I have worked on several projects.</p>
 
-          <p><a class="bold" href="https://sammy.expert/">Sammy</a> – JSnake's own project, an online booking system
-            for beauty
-            specialists. In this project, I wasresponsible for ensuring the quality of markup, participated in the
-            development of the web version andmobile app (iOS and Android), supported the design system using Storybook,
-            implemented internationalization, designed types and components API, and enhanced the user experience.</p>
+          <p><a class="bold" href="https://sammy.expert/">Sammy</a> – JSnake's own project, an&nbsp;online booking
+            system
+            for&nbsp;beauty specialists. In&nbsp;this project, I&nbsp;was responsible for&nbsp;ensuring the&nbsp;quality
+            of&nbsp;markup, participated in the&nbsp;development of the&nbsp;web version and&nbsp;mobile app (iOS and
+            Android), supported the&nbsp;design system using Storybook, implemented internationalization, designed types
+            and&nbsp;components API, and&nbsp;enhanced the&nbsp;user experience.</p>
 
-          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> – cosmetic brand from Silicon Valley. I
-            developed new
-            functionality, took part in atomic design embedding, supported a design system of the project with
-            Storybook, implemented internationalization, and enhanced the user experience.</p>
+          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> – cosmetic brand from Silicon Valley.
+            I&nbsp;developed new functionality, took part in&nbsp;atomic design embedding, supported a&nbsp;design
+            system of the&nbsp;project with Storybook, implemented internationalization, and&nbsp;enhanced the&nbsp;user
+            experience.</p>
 
-          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> – a startup from Texas that offers
-            automated creation of
-            legal entities in the USA. In this project, I worked on markup for interface elements, worked on a knowledge
-            base of the project, and resolved bugs.</p>
+          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> – a&nbsp;startup from Texas that offers
+            automated creation of&nbsp;legal entities in the&nbsp;USA. In&nbsp;this project, I&nbsp;worked
+            on&nbsp;markup for&nbsp;interface elements, worked on a&nbsp;knowledge base of the&nbsp;project,
+            and&nbsp;resolved bugs.</p>
 
           <span class="info-subtitle">Skills</span>
           <div class="skills__list-wrapper">
@@ -190,15 +193,15 @@
         </div>
       </div>
 
-      <div class="position-info">
-        <span class="period period_desktop">June 2020 — May 2021 <span>1 yr</span></span>
+      <div class="position-info" data-date-start="2020-06-01" data-date-end="2021-05-01">
+        <time class="period period_desktop"></time>
 
         <div class="details non-breakable">
           <span class="company">Freelance</span>
           <span class="position">Frontend developer</span>
-          <span class="period period_mobile">June 2020 — May 2021 <span>(1 yr)</span></span>
+          <time class="period period_mobile"></time>
 
-          <p>I created markup for responsive landing pages and marketing materials.</p>
+          <p>I&nbsp;created markup for&nbsp;responsive landing pages and&nbsp;marketing materials.</p>
 
           <span class="info-subtitle">Skills</span>
           <div class="skills__list-wrapper">
@@ -222,11 +225,16 @@
     <section class="about-me">
       <h3>About me</h3>
       <p class="info-subtitle">Frontend developer & CSS-ingeneer</p>
-      <p>I confidently create clean and neat markup and pay attention to semantics and responsiveness. I know BAM and
-        like atomic design. I turn Figma designs into responsive components and keep the design system organized with
-        Storybook.</p>
+      <p>I&nbsp;pay great attention to&nbsp;creating user-friendly, intuitive, and&nbsp;responsive user interfaces in my
+        work. I closely collaborate with the&nbsp;design team and&nbsp;develop fully adaptive web pages, even when
+        the&nbsp;layout does not provide mobile design. I follow the&nbsp;approaches of BAM, Atomic Design,
+        and&nbsp;Storybook Driven Development, which enable me to&nbsp;create design systems that are easily
+        maintainable and&nbsp;scalable.</p>
 
-      <p>I love Git, know SASS and CSS modules, Bootstrap, React, and CRA and I study React Native and TypeScript.</p>
+      <p>I&nbsp;have a&nbsp;keen eye for&nbsp;details and&nbsp;can work according to technical specifications. I have
+        experience working in&nbsp;teams with English-speaking colleagues. I&nbsp;have knowledge of&nbsp;Git, SASS,
+        Tailwind, CSS Modules, React, and&nbsp;experience in&nbsp;animation creation, learning React Native
+        and&nbsp;TypeScript.</p>
 
       <span class="info-subtitle">Languages</span>
       <ul class="list details-list">
@@ -234,7 +242,7 @@
         <li>Serbo-Croatian — С1</li>
       </ul>
 
-      <p>I have been living in Montenegro for 6 years already, I do not consider relocation.</p>
+      <p>I have been living in&nbsp;Montenegro for&nbsp;6 years already, I do not consider relocation.</p>
     </section>
   </main>
 </body>
