@@ -243,6 +243,10 @@ h3 {
   margin: 0 8px;
 }
 
+.about-me {
+  padding-bottom: 10px;
+}
+
 .position-info {
   display: flex;
   gap: 30px;
