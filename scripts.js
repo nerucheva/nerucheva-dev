@@ -106,7 +106,7 @@ positions.forEach((position) => {
 
   calcDateEndToUse = () => {
     if (dateEndFormatted === todayFormatted) {
-      return isLangRu ? 'По наст. время' : 'Present';
+      return isLangRu ? 'Наст. время' : 'Present';
     }
 
     return isLangRu ? dateEndFormattedRu : dateEndFormatted;

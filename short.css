@@ -1,5 +1,9 @@
+.container {
+  max-width: 1200px;
+}
+
 .left-col {
-  width: 45%;
+  width: 40%;
   border-right: 2px solid var(--GRAY);
   padding: 0 24px;
   box-sizing: border-box;
@@ -58,6 +62,29 @@ h2 {
 }
 
 .period_mobile {
-  display: block;
+  display: flex;
   width: auto;
+  padding-left: 5px;
+}
+
+.period_mobile span {
+  display: none;
+}
+
+.position__title-and-period {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.position {
+  margin: 0;
+}
+
+.company {
+  font-size: 18px;
+}
+
+.position-info {
+  margin: 30px 0;
 }
