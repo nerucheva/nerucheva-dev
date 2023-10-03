@@ -3,14 +3,14 @@
 }
 
 .left-col {
-  width: 40%;
+  width: 42%;
   border-right: 2px solid var(--GRAY);
   padding: 0 24px;
   box-sizing: border-box;
 }
 
 .right-col {
-  width: 60%;
+  width: 58%;
   padding: 0 24px;
   box-sizing: border-box;
 }
