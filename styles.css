@@ -243,6 +243,35 @@ h3 {
   margin: 0 8px;
 }
 
+.details-list {
+  padding-left: 20px;
+}
+
+.details-list li {
+  padding-left: 10px;
+}
+
+.details-list li:before {
+  display: inline;
+  margin-right: 10px;
+  margin-left: -18px;
+}
+
+.list_paragraphs {
+  padding-left: 6px;
+}
+
+.list_paragraphs p:first-child {
+  margin-top: 0;
+}
+
+.list_paragraphs li:before {
+  position: absolute;
+  font-size: 22px;
+  line-height: 20px;
+  display: inline-flex;
+}
+
 .about-me {
   padding-bottom: 10px;
 }
@@ -272,20 +301,6 @@ h3 {
 
 .period_mobile {
   display: none;
-}
-
-.details-list {
-  padding-left: 20px;
-}
-
-.details-list li {
-  padding-left: 10px;
-}
-
-.details-list li:before {
-  display: inline;
-  margin-right: 10px;
-  margin-left: -18px;
 }
 
 .company {
@@ -380,5 +395,27 @@ h3 {
 
   .non-breakable {
     page-break-inside: avoid;
+  }
+
+  .period {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .period span {
+    margin-top: 0;
+  }
+
+  .period_mobile {
+    display: flex;
+    gap: 6px;
+  }
+
+  .period_desktop {
+    display: none;
+  }
+
+  .position {
+    margin-bottom: 4px !important;
   }
 }
