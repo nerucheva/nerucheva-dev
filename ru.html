@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./shorter-header.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/locale/ru.js"></script>
@@ -17,13 +18,21 @@
   <header class="container">
     <div class="language-bar">
       <span><a href="./index.html">EN</a> / RU</span>
+
+      <div class="button-block">
+        <div class="tooltip">
+          <span class="tooltip__icon">?</span>
+          <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
+            «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
+        </div>
+        <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
+      </div>
     </div>
 
-    <div class="header-content">
-      <div>
-        <h1>Татьяна Неручева</h1>
-        <h2>Frontend-разработчица</h2>
-        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="180" height="180">
+    <section class="header-content">
+      <div class="left-col">
+        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+
         <div class="general-info">
           <div class="info-section">
             <h5 class="info-section-title">Местоположение</h5>
@@ -43,69 +52,68 @@
           </div>
 
           <div class="info-section">
-            <h5 class="info-section-title">Владею языками</h5>
-            <span>Английский – B2</span>
-            <span>Сербохорватский – C1</span>
+            <h5 class="info-section-title">Языки</h5>
+            <div class="skills__list-wrapper">
+              <ul class="skills__list list">
+                <li>Английский – B2</li>
+                <li>Сербохорватский – C1</li>
+              </ul>
+            </div>
           </div>
 
           <div class="info-section">
             <h5 class="info-section-title">Образование</h5>
-            <span>СПбГУ (2009-20014)</span>
-            <span>Филологический факультет</span>
+            <span>СПбГУ, бакалавр филологии (2009-20014)</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="right-col">
+        <div class="name">
+          <h1>Татьяна Неручева</h1>
+          <h2>Frontend-разработчица</h2>
+        </div>
+
+        <div class="info-section">
+          <h5 class="info-section-title">Обо мне</h5>
+          <p>Frontend-разработчица c 3+ годами опыта работы на американские и европейские компании.
+            Стек: JavaScript, TypeScript, React, GraphQL. Ранее 2 года работала UI-дизайнером, умею выстраивать
+            эффективную
+            коммуникацию с дизайн-отделом, проектировать дизайн-системы и создавать адаптивную верстку даже при
+            отсутствии
+            дополнительных макетов. Имею опыт работы в англоязычных командах. Также занимаюсь менторингом.</p>
+
+          <!-- <p>Люблю работать над B2C продуктами и продуктами для малого бизнеса.</p> -->
+        </div>
+
+        <div class="info-section">
+          <h5 class="info-section-title">Профессиональные навыки</h5>
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>React Native</li>
+              <li>Next.js</li>
+              <li>Vite</li>
+              <li>Jest</li>
+              <li>Git</li>
+              <li>GraphQL</li>
+              <li>Ant Design</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Tailwind</li>
+              <li>Figma</li>
+              <li>БЭМ</li>
+              <li>Atomic Design</li>
+              <li>Storybook</li>
+              <li>Storybook Driven Development</li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <div class="photo-and-btn">
-        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
-        <div class="button-block">
-          <div class="tooltip">
-            <span class="tooltip__icon">?</span>
-            <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
-              «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
-          </div>
-          <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="container">
-
-    <section class="skills">
-      <h3>Профессиональные навыки</h3>
-      <div class="skills__list-wrapper">
-        <ul class="skills__list list">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>React Native</li>
-          <li>Next.js</li>
-          <li>Vite</li>
-          <li>Jest</li>
-          <li>Git</li>
-          <li>GraphQL</li>
-          <li>Ant Design</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Tailwind</li>
-          <li>Figma</li>
-          <li>БЭМ</li>
-          <li>Atomic Design</li>
-          <li>Storybook</li>
-          <li>Storybook Driven Development</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="about-me">
-      <h3>Обо мне</h3>
-      <p>Frontend-разработчица (TS, React) c 3+ годами опыта работы на американские и европейские компании.
-        Стек: JavaScript, TypeScript, React, GraphQL. Ранее 2 года работала UI-дизайнером, умею выстраивать эффективную
-        коммуникацию с дизайн-отделом, проектировать дизайн-системы и создавать адаптивную верстку даже при отсутствии
-        дополнительных макетов. Имею опыт работы в англоязычных командах. В свободное время занимаюсь менторингом.</p>
-
-      <!-- <p>Люблю работать над B2C продуктами и продуктами для малого бизнеса.</p> -->
-
     </section>
 
     <section>
@@ -206,12 +214,13 @@
                 понятной системы нейминга енамов
                 мне
                 удалось зафиксировать сетку и цветовую схему проекта, сохранив при этом простоту применения значений. Я
-                покрыла дизайн-систему Jest-тестами и задокументировала проект.
+                покрыла дизайн-систему юнит-тестами и задокументировала проект.
               </p>
 
               <p>
                 Чтобы эффективно представить новые подходы к разработке проекта, я подготовила доклад и провела
-                презентацию для команды. Проведенный рефакторинг ускорил разработку и внедрение новых фич. Моя <a
+                презентацию для команды. Проведенный рефакторинг ускорил разработку и внедрение новой функциональности.
+                Моя <a
                   href="https://docs.google.com/presentation/d/1YqhSFIq3Klu8H3PzAAhj8177STdJ25Ek8ZLW6--781k/edit?usp=sharing"
                   target="_blank">презентация</a> до сих пор используется при онбординге новых членов команды.
               </p>
@@ -226,8 +235,7 @@
             </li>
 
             <li>Разработала систему онбординга в React Native приложении, что позволило увеличить конверсию. Помимо
-              этого
-              отвечала за качество верстки и создавала адаптивную адаптивную кроссбраузерную верстку для Next.js и React
+              этого отвечала за качество верстки и создавала адаптивную кроссбраузерную верстку для Next.js и React
               Native проектов, участвовала в разработке мобильного приложения под Android и iOS, документировала
               проекты, представляла команду на созвонах с клиентом, занималась исправлением багов и улучшением
               пользовательского опыта.</li>
@@ -281,7 +289,7 @@
       </div>
     </section>
 
-  </main>
+    </main>
 </body>
 
 </html>
