@@ -25,6 +25,7 @@
   --FS-14: 14px;
   --FS-16: 16px;
   --FS-18: 18px;
+  --FS-20: 20px;
   --FS-22: 22px;
   --FS-36: 36px;
 }
@@ -65,17 +66,19 @@ li {
 
 h1 {
   font-size: var(--FS-36);
-  line-height: 1;
+  line-height: 100%;
 }
 
 h2 {
   font-size: var(--FS-18);
+  line-height: 100%;
   font-weight: 400;
   margin-top: 8px;
 }
 
 h3 {
   font-size: var(--FS-22);
+  line-height: 100%;
   padding: 8px 0;
   border-top: 3px solid var(--BLACK);
   border-bottom: 2px solid var(--GRAY);
