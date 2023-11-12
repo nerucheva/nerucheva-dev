@@ -50,8 +50,9 @@
   padding: 0;
 }
 
-.info-section p:first-of-type {
+.info-section p {
   margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .info-section p:last-of-type {
