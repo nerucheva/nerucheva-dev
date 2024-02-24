@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./shorter-header.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/locale/ru.js"></script>
@@ -17,25 +18,26 @@
   <header class="container">
     <div class="language-bar">
       <span><a href="./index.html">EN</a> / RU</span>
+
+      <div class="button-block">
+        <div class="tooltip">
+          <span class="tooltip__icon">?</span>
+          <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
+            «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
+        </div>
+        <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
+      </div>
     </div>
 
-    <div class="header-content">
-      <div>
-        <h1>Татьяна Неручева</h1>
-        <h2>Frontend-разработчица, CSS-инженер</h2>
-        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="180" height="180">
+    <section class="header-content">
+      <div class="left-col">
+        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+
         <div class="general-info">
           <div class="info-section">
             <h5 class="info-section-title">Местоположение</h5>
             <span><span class="label">Проживание:</span> Черногория, Тиват</span>
             <span><span class="label">Готовность к&nbsp;работе:</span> готова к&nbsp;удаленной работе </span>
-          </div>
-
-          <div class="info-section">
-            <h5 class="info-section-title">Возраст и&nbsp;стаж</h5>
-            <span><span class="label">Стаж: </span><span id="totalExp"></span></span>
-            <span><span class="label">Возраст: </span><span id="age" data-date-start="1992-01-15"></span></span>
-            <span><span class="label">Зарплатные ожидания:</span> от&nbsp;2500$</span>
           </div>
 
           <div class="info-section">
@@ -45,64 +47,72 @@
             </span>
             <span><span class="label">GitHub:</span> <a
                 href="https://github.com/nerucheva">github.com/nerucheva</a></span>
+            <span><span class="label">LinkedIn:</span> <a
+                href="https://www.linkedin.com/in/nerucheva/">linkedin.com/in/nerucheva</a></span>
+          </div>
+
+          <div class="info-section">
+            <h5 class="info-section-title">Языки</h5>
+            <div class="skills__list-wrapper">
+              <ul class="skills__list list">
+                <li>Английский – B2</li>
+                <li>Сербохорватский – C1</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h5 class="info-section-title">Образование</h5>
+            <span>СПбГУ, бакалавр филологии <br /> Русский язык и литература (2009-20014)</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="right-col">
+        <div class="name">
+          <h1>Татьяна Неручева</h1>
+          <h2>Frontend-разработчица</h2>
+        </div>
+
+        <div class="info-section">
+          <h5 class="info-section-title">Обо мне</h5>
+          <p>Frontend-разработчица c 3+ годами опыта работы на американские и европейские компании. <br />
+            Стек: JavaScript, TypeScript, React, GraphQL. Ранее 2 года работала UI-дизайнером, умею выстраивать
+            эффективную коммуникацию с дизайн-отделом, проектировать дизайн-системы и создавать Pixel Perfect и
+            адаптивную верстку даже без дополнительных макетов. Имею опыт работы в англоязычных командах. Также
+            занимаюсь менторингом.</p>
+
+          <!-- <p>Люблю работать над B2C продуктами и продуктами для малого бизнеса.</p> -->
+        </div>
+
+        <div class="info-section">
+          <h5 class="info-section-title">Профессиональные навыки</h5>
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>React Native</li>
+              <li>Next.js</li>
+              <li>Vite</li>
+              <li>Jest</li>
+              <li>Git</li>
+              <li>GraphQL</li>
+              <li>Ant Design</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Tailwind</li>
+              <li>Figma</li>
+              <li>БЭМ</li>
+              <li>Atomic Design</li>
+              <li>Storybook</li>
+              <li>Storybook Driven Development</li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <div class="photo-and-btn">
-        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
-        <div class="button-block">
-          <div class="tooltip">
-            <span class="tooltip__icon">?</span>
-            <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
-              «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
-          </div>
-          <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="container">
-
-    <section class="skills">
-      <h3>Профессиональные навыки</h3>
-      <div class="skills__list-wrapper">
-        <ul class="skills__list list">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>React Native</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Storybook</li>
-          <li>Figma Design</li>
-          <li>БЭМ</li>
-          <li>Git</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="about-me">
-      <h3>Обо мне</h3>
-      <p class="info-subtitle">Frontend-разработчица с&nbsp;уклоном в&nbsp;верстку</p>
-      <p>Большое внимание в&nbsp;своей работе я&nbsp;уделяю созданию дружелюбных, понятных и&nbsp;отзывчивых
-        пользовательских интерфейсов. Тесно сотрудничаю с&nbsp;дизайн-отделом и&nbsp;верстаю полностью адаптивные
-        страницы даже в&nbsp;случаях, когда в&nbsp;макете не&nbsp;представлен дизайн для&nbsp;мобильных устройств.
-        Придерживаюсь подходов BAM, Atomic Design и&nbsp;Storybook Driven Development, это позволяет мне создавать
-        дизайн-системы, которые легко поддерживать и&nbsp;масштабировать.
-      </p>
-
-      <p>Обращаю внимание на&nbsp;детали и&nbsp;умею работать согласно техническим заданиям, имею опыт работы
-        в&nbsp;команде с&nbsp;англоязычными коллегами. Знаю Git, SASS, Tailwind и&nbsp;CSS-modules, React, имею опыт
-        создания анимаций, изучаю React Native и&nbsp;TypeScript.</p>
-
-      <span class="info-subtitle">Владею языками:</span>
-      <ul class="list details-list">
-        <li>Английский — B2</li>
-        <li>Сербо-хорватский — С1</li>
-      </ul>
-
-      <p>Уже 6 лет живу в&nbsp;Черногории, релокацию не&nbsp;рассматриваю.</p>
     </section>
 
     <section>
@@ -113,47 +123,57 @@
 
         <div class="details">
           <span class="company">Pixel Point</span>
-          <span class="position">Frontend-разработчица</span>
-          <time class="period period_mobile"></time>
+          <div class="position-wrapper">
+            <span class="position">Frontend-разработчица</span>
+            <time class="period period_mobile"></time>
+          </div>
 
           <p>Участвую в&nbsp;разработке сайтов для&nbsp;ряда технологических компаний с&nbsp;использованием Gatsby,
             Next.js и&nbsp;Tailwind.
           </p>
-          <p>Важную часть моей работы составляет разработка интерфейсов, создание качественной адаптивной
-            кроссбраузерной верстки, добавление новой функциональности и&nbsp;интеграция страниц с&nbsp;CMS. Принимала
-            участие в&nbsp;корпоративных хакатонах.</p>
 
-          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> — занимается разработкой open-source
-            ПО и
-            корпоративных решений, флагманская технология компании — Cilium — используется Google, GitLab, Adobe.</p>
+          <ul class="list details-list list_paragraphs">
+            <li>
+              <p>
+                Разработала гибкую систему шаблонов для сайта <a href="https://isovalent.com/" target="_blank"
+                  rel="noopener noreferrer">Isovalent</a> и с помощью GraphQL реализовала интеграцию
+                шаблонов с CMS. Разработала <a href="https://isovalent.com/resource-library/" target="_blank"
+                  rel="noopener noreferrer">базу
+                  знаний</a> проекта,
+                интегрировала в нее поисковый движок и систему фильтров для контента. Оптимизировала ряд страниц проекта
+                по рекомендациям Lighthouse до 97% производительности.
+              </p>
+            </li>
 
-          <p>Занимаюсь разработкой <a href="https://isovalent.com/resource-library/">библиотеки ресурсов</a>, системы
-            поиска и&nbsp;фильтров для&nbsp;нее. Разрабатываю новые шаблоны страниц, улучшаю существующие, занимаюсь
-            технической поддержкой клиента. Также работаю над&nbsp;сайтами дочерних продуктов компании:</p>
+            <li>
+              <p>
+                В рамках корпоративного хакатона разработала движок, который позволяет дизайнерам подобрать цветовую
+                палитру для подсветки синтаксиса в блоках кода и сгенерировать CSS.
+              </p>
+            </li>
 
-          <ul class="list details-list">
-            <li><a class="bold" href="https://ebpf.io/">eBPF</a> — технология, которая позволяет
-              запускать произвольный код пользователя в&nbsp;рамках ядра.</li>
-            <li><a class="bold" href="https://cilium.io/">Cilium</a> — open source проект, который
-              обеспечивает сетевые, безопасностные и&nbsp;мониторинговые функции для&nbsp;облачных сред, включая
-              Kubernetes и&nbsp;другие платформы оркестрации контейнеров.</li>
-            <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> –
-              документация для&nbsp;компонента Cilium на&nbsp;базе eBPF, который позволяет в&nbsp;реальном времени
-              наблюдать за&nbsp;безопасностью и&nbsp;контролировать выполнение программного обеспечения.</li>
+            <li>
+              <p>
+                С использованием библиотеки Lottie имплементировала анимации на главной странице <a
+                  href="https://configu.com/" target="_blank" rel="noopener noreferrer">Configu</a>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                В рамках программы менторинга обучила двух человек адаптивной валидной кроссбраузерной верстке.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                С моим участием было запущено три проекта. Также я создаю качественную адаптивную кроссбраузерную
+                верстку, осуществляю техническую поддержку клиента на английском языке, пишу
+                документацию к новой функциональности, исправляю баги и улучшаю для клиента user experience работы с
+                сайтом в CMS.
+              </p>
+            </li>
           </ul>
-
-          <p><a class="bold" href="https://configu.com/">Configu</a> — платформа управления
-            конфигурацией E2E приложений. Я&nbsp;участвовала в&nbsp;подготовке проекта к&nbsp;релизу, имплементировала
-            анимации, разрабатывала раздел документации.
-          </p>
-
-          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> — платформа автоматизации налогообложения,
-            упрощающая управление налогами по&nbsp;всему миру. Я&nbsp;участвовала в&nbsp;подготовке проекта
-            к&nbsp;релизу, разрабатывала раздел Products.</p>
-
-          <p>Также работала над&nbsp;проектами <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a>
-            и&nbsp;<a class="bold" href="https://neon.tech/">Neon</a>.
-          </p>
 
           <span class="info-subtitle">Используемые навыки</span>
           <div class="skills__list-wrapper">
@@ -179,26 +199,54 @@
 
         <div class="details">
           <span class="company">JSNAKE</span>
-          <span class="position">Frontend-разработчица</span>
-          <time class="period period_mobile"></time>
+          <div class="position-wrapper">
+            <span class="position">Frontend-разработчица</span>
+            <time class="period period_mobile"></time>
+          </div>
 
-          <p>Работала над&nbsp;несколькими проектами:</p>
+          <p>Работала с продуктовыми стартапами <a href="https://sammy.expert/" target="_blank"
+              rel="noopener noreferrer">Sammy</a>, <a href="https://lovefromyours.com/" target="_blank">Yours</a>, <a
+              href="https://betterlegal.com/" rel="noopener noreferrer">BetterLegal</a>.</p>
 
-          <p><a class="bold" href="https://sammy.expert/">Sammy</a> — собственный проект JSnake,
-            система онлайн-бронирования для&nbsp;специалистов в&nbsp;области красоты. Отвечала за качество верстки,
-            участвовала в&nbsp;разработке web-версии и&nbsp;мобильного приложения под Android и&nbsp;iOS, поддерживала
-            дизайн-систему проекта в&nbsp;Storybook, занималась интернационализацией, проектировала типы и&nbsp;дизайн
-            API компонентов, занималась улучшением пользовательского опыта.</p>
+          <ul class="list details-list list_paragraphs">
+            <li>
+              <p>Переработала и структурировала подходы к организации кодовой базы и дизайн-системы React
+                Native
+                приложения <a href="https://sammy.expert/" target="_blank" rel="noopener noreferrer">Sammy</a> для
+                Android и iOS и его веб-версии.
+                В рамках поэтапного рефакторинга я внедрила подходы Atomic Design и <a
+                  href="https://medium.com/nulogy/storybook-driven-development-a3c517276c07" target="_blank"
+                  rel="noopener noreferrer">Storybook
+                  Driven Development</a>, спроектировала типы (TS) и API компонентов. С помощью CSS variables и
+                понятной системы нейминга енамов
+                мне
+                удалось зафиксировать сетку и цветовую схему проекта, сохранив при этом простоту применения значений. Я
+                покрыла дизайн-систему юнит-тестами и задокументировала проект.
+              </p>
 
-          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> — косметический бренд из&nbsp;Кремниевой
-            долины.
-            Занималась разработкой новой функциональности, участвовала во&nbsp;внедрении atomic design, поддерживала
-            дизайн-систему проекта в&nbsp;Storybook, принимала участие в&nbsp;миграции проекта на&nbsp;Type Script,
-            занималась интернационализацией и&nbsp;улучшением пользовательского опыта.</p>
+              <p>
+                Чтобы представить новые подходы к разработке проекта, я подготовила доклад и провела
+                презентацию для команды. Проведенный рефакторинг ускорил разработку и внедрение новой функциональности.
+                Моя <a
+                  href="https://docs.google.com/presentation/d/1YqhSFIq3Klu8H3PzAAhj8177STdJ25Ek8ZLW6--781k/edit?usp=sharing"
+                  target="_blank">презентация</a> до сих пор используется при онбординге новых членов команды.
+              </p>
+            </li>
 
-          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> — стартап из&nbsp;Техаса, который позволяет
-            автоматизировать создание юридического лица в&nbsp;Соединенных Штатах. Верстала элементы интерфейса,
-            работала над&nbsp;базой знаний проекта, исправляла баги.</p>
+            <li>
+              <p>Добавила поддержку интернационализации в проекте <a href="https://lovefromyours.com/" target="_blank"
+                  rel="noopener noreferrer">Yours</a>. При помощи Intl API я реализовала
+                распознавание языка пользователя и внедрила поддержку версий на двух языках (en-gb, en-us).
+                Также для упрощения поддержки и оптимизации работы проекта я провела его миграцию на TypeScript.
+              </p>
+            </li>
+
+            <li>Разработала систему онбординга в React Native приложении, что позволило увеличить конверсию. Помимо
+              этого отвечала за качество верстки и создавала адаптивную кроссбраузерную верстку для Next.js и React
+              Native проектов, участвовала в разработке мобильного приложения под Android и iOS, документировала
+              проекты, представляла команду на созвонах с клиентом, занималась исправлением багов и улучшением
+              пользовательского опыта.</li>
+          </ul>
 
           <span class="info-subtitle">Используемые навыки</span>
           <div class="skills__list-wrapper">
@@ -207,8 +255,9 @@
               <li>TypeScript</li>
               <li>React</li>
               <li>React Native</li>
-              <li>Storybook</li>
+              <li>Jest</li>
               <li>Next.js</li>
+              <li>Storybook</li>
               <li>HTML</li>
               <li>CSS</li>
               <li>Адаптивная верстка</li>
@@ -223,10 +272,13 @@
 
         <div class="details non-breakable">
           <span class="company">Freelance</span>
-          <span class="position">Frontend-разработчица</span>
-          <time class="period period_mobile"></time>
+          <div class="position-wrapper">
+            <span class="position">Frontend-разработчица</span>
+            <time class="period period_mobile"></time>
+          </div>
 
-          <p>Занималась версткой адаптивных лендингов и&nbsp;созданием маркетинговых материалов.</p>
+          <p>Занималась версткой адаптивных лендингов и&nbsp;созданием маркетинговых материалов. Также занималась
+            UI-дизайном.</p>
 
           <span class="info-subtitle">Используемые навыки</span>
           <div class="skills__list-wrapper">
@@ -247,7 +299,7 @@
       </div>
     </section>
 
-  </main>
+    </main>
 </body>
 
 </html>

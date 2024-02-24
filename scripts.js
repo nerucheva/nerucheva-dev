@@ -80,8 +80,8 @@ const periodString = (fromDate, tillDate, isAge, isTotalExperience) => {
 };
 
 // Insert age
-const age = document.getElementById('age');
-age.textContent = periodString(birthday, today, true, false);
+// const age = document.getElementById('age');
+// age.textContent = periodString(birthday, today, true, false);
 
 // Insert positions experience
 const positions = document.querySelectorAll('.position-info');
@@ -193,9 +193,9 @@ datesSorted.forEach((element, index) => {
 
 const totalMonths = getTotalMonths(uniquePeriods);
 
-const exp = document.getElementById('totalExp');
+// const exp = document.getElementById('totalExp');
 
-const totalExpYears = countYears(totalMonths);
-const totalExpMonths = countMonths(totalMonths);
+// const totalExpYears = countYears(totalMonths);
+// const totalExpMonths = countMonths(totalMonths);
 
-exp.textContent = periodStringLang(totalExpYears, totalExpMonths, false, true);
+// exp.textContent = periodStringLang(totalExpYears, totalExpMonths, false, true);

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/locale/ru.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/plugin/isBetween.js"></script>
+  <script defer src="./scripts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatiana Nerucheva — Frontend-разработчица</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="language-bar">
+      <span><a href="./index.html">EN</a> / RU</span>
+    </div>
+
+    <div class="header-content">
+      <div>
+        <h1>Татьяна Неручева</h1>
+        <h2>Frontend-разработчица, CSS-инженер</h2>
+        <img class="photo photo__mobile" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="180" height="180">
+        <div class="general-info">
+          <div class="info-section">
+            <h5 class="info-section-title">Местоположение</h5>
+            <span><span class="label">Проживание:</span> Черногория, Тиват</span>
+            <span><span class="label">Готовность к&nbsp;работе:</span> готова к&nbsp;удаленной работе </span>
+          </div>
+
+          <!-- <div class="info-section">
+            <h5 class="info-section-title">Возраст и&nbsp;стаж</h5>
+            <span><span class="label">Стаж: </span><span id="totalExp"></span></span>
+            <span><span class="label">Возраст: </span><span id="age" data-date-start="1992-01-15"></span></span>
+            <span><span class="label">Зарплатные ожидания:</span> от&nbsp;2500$</span>
+          </div> -->
+
+          <div class="info-section">
+            <h5 class="info-section-title">Контактная информация</h5>
+            <span><span class="label">Telegram:</span> <a href="https://telegram.me/nerucheva">@nerucheva</a></span>
+            <span><span class="label">Email:</span> <a href="mailto:tatiana@nerucheva.com">tatiana@nerucheva.com</a>
+            </span>
+            <span><span class="label">GitHub:</span> <a
+                href="https://github.com/nerucheva">github.com/nerucheva</a></span>
+            <span><span class="label">LinkedIn:</span> <a
+                href="https://www.linkedin.com/in/nerucheva/">linkedin.com/in/nerucheva</a></span>
+          </div>
+
+          <div class="info-section">
+            <h5 class="info-section-title">Владею языками</h5>
+            <span>Английский – B2</span>
+            <span>Сербо-хорватский – C1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-and-btn">
+        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+        <div class="button-block">
+          <div class="tooltip">
+            <span class="tooltip__icon">?</span>
+            <div class="tooltop__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
+              «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
+          </div>
+          <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+
+    <section class="skills">
+      <h3>Профессиональные навыки</h3>
+      <div class="skills__list-wrapper">
+        <ul class="skills__list list">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>React Native</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Storybook</li>
+          <li>Figma Design</li>
+          <li>БЭМ</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <h3>Обо мне</h3>
+      <p class="info-subtitle">Frontend-разработчица с&nbsp;уклоном в&nbsp;верстку</p>
+      <p>Большое внимание в&nbsp;своей работе я&nbsp;уделяю созданию дружелюбных, понятных и&nbsp;отзывчивых
+        пользовательских интерфейсов. Тесно сотрудничаю с&nbsp;дизайн-отделом и&nbsp;верстаю полностью адаптивные
+        страницы даже в&nbsp;случаях, когда в&nbsp;макете не&nbsp;представлен дизайн для&nbsp;мобильных устройств.
+        Придерживаюсь подходов BAM, Atomic Design и&nbsp;Storybook Driven Development, это позволяет мне создавать
+        дизайн-системы, которые легко поддерживать и&nbsp;масштабировать.
+      </p>
+
+      <p>Обращаю внимание на&nbsp;детали и&nbsp;умею работать согласно техническим заданиям, имею опыт работы
+        в&nbsp;команде с&nbsp;англоязычными коллегами. Знаю Git, SASS, Tailwind и&nbsp;CSS-modules, React, имею опыт
+        создания анимаций, изучаю React Native и&nbsp;TypeScript.</p>
+    </section>
+
+    <section>
+      <h3>Опыт работы</h3>
+
+      <div class="position-info" data-date-start="2022-08-01">
+        <time class="period period_desktop"></time>
+
+        <div class="details">
+          <span class="company">Pixel Point</span>
+          <span class="position">Frontend-разработчица</span>
+          <time class="period period_mobile"></time>
+
+          <p>Участвую в&nbsp;разработке сайтов для&nbsp;ряда технологических компаний с&nbsp;использованием Gatsby,
+            Next.js и&nbsp;Tailwind.
+          </p>
+          <p>Важную часть моей работы составляет разработка интерфейсов, создание качественной адаптивной
+            кроссбраузерной верстки, добавление новой функциональности и&nbsp;интеграция страниц с&nbsp;CMS. Принимала
+            участие в&nbsp;корпоративных хакатонах.</p>
+
+          <p><a class="bold" href="https://isovalent.com/">Isovalent</a> — занимается разработкой open-source
+            ПО и
+            корпоративных решений, флагманская технология компании — Cilium — используется Google, GitLab, Adobe.</p>
+
+          <p>Занимаюсь разработкой <a href="https://isovalent.com/resource-library/">библиотеки ресурсов</a>, системы
+            поиска и&nbsp;фильтров для&nbsp;нее. Разрабатываю новые шаблоны страниц, улучшаю существующие, занимаюсь
+            технической поддержкой клиента. Также работаю над&nbsp;сайтами дочерних продуктов компании:</p>
+
+          <ul class="list details-list">
+            <li><a class="bold" href="https://ebpf.io/">eBPF</a> — технология, которая позволяет
+              запускать произвольный код пользователя в&nbsp;рамках ядра.</li>
+            <li><a class="bold" href="https://cilium.io/">Cilium</a> — open source проект, который
+              обеспечивает сетевые, безопасностные и&nbsp;мониторинговые функции для&nbsp;облачных сред, включая
+              Kubernetes и&nbsp;другие платформы оркестрации контейнеров.</li>
+            <li><a class="bold" href="https://tetragon.cilium.io/docs/">Tetragon docs</a> –
+              документация для&nbsp;компонента Cilium на&nbsp;базе eBPF, который позволяет в&nbsp;реальном времени
+              наблюдать за&nbsp;безопасностью и&nbsp;контролировать выполнение программного обеспечения.</li>
+          </ul>
+
+          <p><a class="bold" href="https://configu.com/">Configu</a> — платформа управления
+            конфигурацией E2E приложений. Я&nbsp;участвовала в&nbsp;подготовке проекта к&nbsp;релизу, имплементировала
+            анимации, разрабатывала раздел документации.
+          </p>
+
+          <p><a class="bold" href="https://www.fonoa.com/">Fonoa</a> — платформа автоматизации налогообложения,
+            упрощающая управление налогами по&nbsp;всему миру. Я&nbsp;участвовала в&nbsp;подготовке проекта
+            к&nbsp;релизу, разрабатывала раздел Products.</p>
+
+          <p>Также работала над&nbsp;проектами <a class="bold" href="https://www.revenuecat.com/">RevenueCat</a>
+            и&nbsp;<a class="bold" href="https://neon.tech/">Neon</a>.
+          </p>
+
+          <span class="info-subtitle">Используемые навыки</span>
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
+              <li>Gatsby</li>
+              <li>Next.js</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>GraphQL</li>
+              <li>Tailwind</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Адаптивная верстка</li>
+              <li>Figma Design</li>
+              <li>Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-info" data-date-start="2021-05-01" data-date-end="2022-08-01">
+        <time class="period period_desktop"></time>
+
+        <div class="details">
+          <span class="company">JSNAKE</span>
+          <span class="position">Frontend-разработчица</span>
+          <time class="period period_mobile"></time>
+
+          <p>Работала над&nbsp;несколькими проектами:</p>
+
+          <p><a class="bold" href="https://sammy.expert/">Sammy</a> — собственный проект JSnake,
+            система онлайн-бронирования для&nbsp;специалистов в&nbsp;области красоты. Отвечала за качество верстки,
+            участвовала в&nbsp;разработке web-версии и&nbsp;мобильного приложения под Android и&nbsp;iOS, поддерживала
+            дизайн-систему проекта в&nbsp;Storybook, занималась интернационализацией, проектировала типы и&nbsp;дизайн
+            API компонентов, занималась улучшением пользовательского опыта.</p>
+
+          <p><a class="bold" href="https://lovefromyours.com/">Yours</a> — косметический бренд из&nbsp;Кремниевой
+            долины.
+            Занималась разработкой новой функциональности, участвовала во&nbsp;внедрении atomic design, поддерживала
+            дизайн-систему проекта в&nbsp;Storybook, принимала участие в&nbsp;миграции проекта на&nbsp;Type Script,
+            занималась интернационализацией и&nbsp;улучшением пользовательского опыта.</p>
+
+          <p><a class="bold" href="https://betterlegal.com/">BetterLegal</a> — стартап из&nbsp;Техаса, который позволяет
+            автоматизировать создание юридического лица в&nbsp;Соединенных Штатах. Верстала элементы интерфейса,
+            работала над&nbsp;базой знаний проекта, исправляла баги.</p>
+
+          <span class="info-subtitle">Используемые навыки</span>
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>React Native</li>
+              <li>Storybook</li>
+              <li>Next.js</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Адаптивная верстка</li>
+              <li>Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-info" data-date-start="2020-06-01" data-date-end="2021-05-01">
+        <time class="period period_desktop"></time>
+
+        <div class="details non-breakable">
+          <span class="company">Freelance</span>
+          <span class="position">Frontend-разработчица</span>
+          <time class="period period_mobile"></time>
+
+          <p>Занималась версткой адаптивных лендингов и&nbsp;созданием маркетинговых материалов.</p>
+
+          <span class="info-subtitle">Используемые навыки</span>
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SCSS</li>
+              <li>БЭМ</li>
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>Git</li>
+              <li>Twitter Bootstrap</li>
+              <li>Ant</li>
+              <li>Figma Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
