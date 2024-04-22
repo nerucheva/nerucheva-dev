@@ -125,7 +125,7 @@ positions.forEach((position) => {
   });
 
   periodsMobile.forEach((period) => {
-    period.innerHTML = `${dateStartToUse} - ${dateEndToUse} <span>(${periodStr})</span>`;
+    period.innerHTML = `${dateStartToUse} - ${dateEndToUse}`;
   });
 });
 
