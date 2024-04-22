@@ -326,9 +326,51 @@ h3 {
   padding: 0;
 }
 
+.left-col .name {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   .period {
     width: 106px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-content.header-content-new {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .header-content-new .right-col,
+  .header-content-new .left-col {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+
+  .right-col .name {
+    display: none;
+  }
+
+  .left-col .name {
+    display: block;
+    border-bottom: none;
+  }
+
+  .header-bold {
+    font-size: var(--FS-22);
+    line-height: 100%;
+    padding: 8px 0;
+    border-top: 3px solid var(--BLACK);
+    border-bottom: 2px solid var(--GRAY);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .header-content-new .photo {
+    width: 200px;
+    height: 200px;
   }
 }
 
