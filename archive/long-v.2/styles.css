@@ -76,7 +76,7 @@ h2 {
   margin-top: 8px;
 }
 
-h3:not(h3.info-section-title) {
+h3 {
   font-size: var(--FS-22);
   line-height: 100%;
   padding: 8px 0;
@@ -91,11 +91,12 @@ h3:not(h3.info-section-title) {
   padding-right: 40px;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .language-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0 10px;
+  padding: 10px 0;
   border-bottom: 2px solid var(--GRAY);
 }
 
@@ -103,9 +104,31 @@ h3:not(h3.info-section-title) {
   color: var(--GRAY-DARK);
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.photo-and-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  width: 260px;
+  border-radius: 50%;
+  height: auto;
+}
+
+.photo__mobile {
+  display: none;
+}
+
 .button-block {
   position: relative;
-  margin-top: 0;
+  margin-top: 26px;
 }
 
 .tooltip {
@@ -131,7 +154,7 @@ h3:not(h3.info-section-title) {
   cursor: pointer;
 }
 
-.tooltip__text {
+.tooltop__text {
   position: absolute;
   z-index: -1;
   right: 18px;
@@ -144,9 +167,7 @@ h3:not(h3.info-section-title) {
   transition: 0.2s;
 }
 
-/* TODO: fix .tooltip:focus .tooltip__text  doesn't trigger the styles change */
-.tooltip:hover .tooltip__text,
-.tooltip:focus .tooltip__text {
+.tooltip:hover .tooltop__text {
   z-index: 1;
   opacity: 1;
 }
@@ -170,41 +191,6 @@ h3:not(h3.info-section-title) {
   border-color: var(--BLUE);
 }
 
-.header-content {
-  display: flex;
-  justify-content: start;
-  padding-bottom: 30px;
-  padding-top: 40px;
-}
-
-.left-col {
-  width: 45%;
-  border-right: 2px solid var(--GRAY);
-  padding: 0 24px 0 0;
-  box-sizing: border-box;
-}
-
-.right-col {
-  width: 55%;
-  padding: 0 0 0 24px;
-  box-sizing: border-box;
-}
-
-.name {
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--GRAY);
-}
-
-.left-col .name {
-  display: none;
-}
-
-.photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 0;
-}
-
 .general-info {
   padding-top: 20px;
 }
@@ -220,24 +206,8 @@ h3:not(h3.info-section-title) {
   padding-top: 0;
 }
 
-.info-section-title,
-h3.info-section-title {
+.info-section-title {
   margin-bottom: 4px;
-  font-weight: 700;
-}
-
-.info-section p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.info-section p:last-of-type {
-  margin-bottom: 0;
-}
-
-.position-wrapper {
-  display: flex;
-  margin: 4px 0 20px;
 }
 
 .label {
@@ -250,7 +220,7 @@ h3.info-section-title {
 }
 
 .skills {
-  padding-top: 0;
+  padding-top: 30px;
 }
 
 .skills__list-wrapper {
@@ -261,6 +231,7 @@ h3.info-section-title {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  padding: 16px 0 20px;
   margin-left: -23px;
 }
 
@@ -304,6 +275,10 @@ h3.info-section-title {
   display: inline-flex;
 }
 
+.about-me {
+  padding-bottom: 10px;
+}
+
 .position-info {
   display: flex;
   gap: 30px;
@@ -314,6 +289,23 @@ h3.info-section-title {
   margin: 20px 0;
 }
 
+.period {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 206px;
+}
+
+.period span {
+  display: block;
+  color: var(--GRAY-MEDIUM);
+  margin-top: 2px;
+}
+
+.period_mobile {
+  display: none;
+}
+
 .company {
   font-size: var(--FS-22);
   font-weight: 700;
@@ -321,21 +313,7 @@ h3.info-section-title {
 
 .position {
   display: block;
-  margin: 0;
-}
-
-.period {
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  width: auto;
-  margin-left: 6px;
-}
-
-.period::before {
-  content: '|';
-  display: block;
-  margin-right: 6px;
+  margin: 4px 0 20px;
 }
 
 .info-subtitle {
@@ -348,19 +326,24 @@ h3.info-section-title {
   padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.left-col .name {
+  display: none;
+}
 
-  .header-content {
+@media screen and (max-width: 900px) {
+  .period {
+    width: 106px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-content.header-content-new {
     flex-direction: column;
     padding-bottom: 20px;
   }
 
-  .right-col,
-  .left-col {
+  .header-content-new .right-col,
+  .header-content-new .left-col {
     width: 100%;
     border-right: none;
     padding: 0;
@@ -375,7 +358,7 @@ h3.info-section-title {
     border-bottom: none;
   }
 
-  h3.info-section-title {
+  .header-bold {
     font-size: var(--FS-22);
     line-height: 100%;
     padding: 8px 0;
@@ -385,108 +368,99 @@ h3.info-section-title {
     margin-bottom: 20px;
   }
 
-  .photo {
+  .header-content-new .photo {
     width: 200px;
     height: 200px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .position-wrapper {
-    flex-direction: column;
+@media screen and (max-width: 660px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .photo {
+    width: 180px;
+  }
+
+  .position {
+    margin-bottom: 4px;
   }
 
   .period {
-    margin-left: 0;
-    color: var(--GRAY-DARK);
+    width: auto;
   }
 
-  .period::before {
+  .period span {
+    display: inline;
+  }
+
+  .period_desktop {
     display: none;
+  }
+
+  .period_mobile {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tooltop__text {
+    right: -120px;
+    top: -79px;
+  }
+
+  .photo-and-btn .photo {
+    display: none;
+  }
+
+  .photo__mobile {
+    display: block;
+    width: 180px;
+    margin-top: 20px;
   }
 }
 
 @media print {
-  * {
-    font-size: var(--FS-14);
+  .language-bar,
+  .button-block {
+    display: none;
   }
 
-  h1 {
-    font-size: 34px;
-  }
-
-  h3,
-  .company {
-    font-size: var(--FS-20);
-  }
-
-  p,
-  li {
-    margin: 8px 0;
+  .about-me h3 {
+    margin-top: 20px;
   }
 
   .non-breakable {
     page-break-inside: avoid;
   }
 
-  .language-bar,
-  .button-block {
-    display: none;
-  }
-
-  .header-content {
-    padding-top: 0;
-  }
-
-  .name {
-    padding-bottom: 14px;
-  }
-
-  .general-info {
-    padding-top: 14px;
-  }
-
-  .about-me h3 {
-    margin-top: 0;
-  }
-
-  .skills__list-wrapper {
-    margin-top: -4px;
-  }
-
-  .skills__list {
-    margin-top: 2px;
-    margin-left: -21px;
-  }
-
-  .info-section-title {
-    font-size: var(--FS-16);
-  }
-
-  .info-section p:first-of-type {
-    margin-top: 0;
-  }
-
-  .info-section p:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .position-wrapper {
-    margin: 4px 0 0px;
-  }
-
-  .position {
-    margin: 0 !important;
-  }
-
   .period {
-    display: flex;
     flex-direction: row;
-    gap: 6px;
     width: auto;
   }
 
-  .info-subtitle {
-    margin: 14px 0 2px;
+  .period span {
+    margin-top: 0;
+  }
+
+  .period_mobile {
+    display: flex;
+    gap: 6px;
+  }
+
+  .period_desktop {
+    display: none;
+  }
+
+  .position {
+    margin-bottom: 4px !important;
   }
 }

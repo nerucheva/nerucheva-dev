@@ -80,7 +80,7 @@ const periodString = (fromDate, tillDate, isAge, isTotalExperience) => {
 };
 
 // Insert age
-// const age = document.getElementById('age'); // TODO: replace to findElemntById
+// const age = document.getElementById('age');
 // age.textContent = periodString(birthday, today, true, false);
 
 // Insert positions experience
@@ -117,20 +117,15 @@ positions.forEach((position) => {
 
   const periodStr = periodString(dateStart, dateEnd, false, false);
 
-  const periods = position.querySelectorAll('.period');
   const periodsDesktop = position.querySelectorAll('.period_desktop');
   const periodsMobile = position.querySelectorAll('.period_mobile');
-
-  periods.forEach((period) => {
-    period.innerHTML = `${dateStartToUse} - ${dateEndToUse}`;
-  });
 
   periodsDesktop.forEach((period) => {
     period.innerHTML = `${dateStartToUse} - ${dateEndToUse} <span>${periodStr}</span>`;
   });
 
   periodsMobile.forEach((period) => {
-    period.innerHTML = `${dateStartToUse} - ${dateEndToUse} <span>(${periodStr})</span>`;
+    period.innerHTML = `${dateStartToUse} - ${dateEndToUse}`;
   });
 });
 
