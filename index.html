@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./shorter-header.css">
+  <link rel="stylesheet" href="./styles-new.css">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+  <!-- <link rel="stylesheet" href="./shorter-header.css"> -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/plugin/isBetween.js"></script>
@@ -20,32 +21,33 @@
 
       <div class="button-block">
         <div class="tooltip">
-          <span class="tooltip__icon">?</span>
-          <div class="tooltop__text">You may print this page or&nbsp;download it as&nbsp;PDF by&nbsp;choosing «Save
+          <!-- TODO: make the tooltip accessible -->
+          <span class="tooltip__icon" tabindex="0">?</span>
+          <div class="tooltip__text">You may print this page or&nbsp;download it as&nbsp;PDF by&nbsp;choosing «Save
             as&nbsp;PDF» in the&nbsp;«printer» select</div>
         </div>
         <button class="pdf-button" type="button" onclick="window.print()">Download as PDF</button>
       </div>
     </div>
 
-    <section class="header-content header-content-new">
+    <section class="header-content">
       <div class="left-col">
         <div class="name">
           <h1>Tatiana Nerucheva</h1>
           <h2>Frontend developer</h2>
         </div>
 
-        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="260" height="260">
+        <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="200" height="200">
 
         <div class="general-info">
           <div class="info-section">
-            <h5 class="info-section-title">Location</h5>
+            <span class="info-section-title">Location</span>
             <span><span class="label">Residence:</span> Montenegro, Tivat</span>
             <span><span class="label">Readiness for&nbsp;work:</span> ready for&nbsp;remote job</span>
           </div>
 
           <div class="info-section">
-            <h5 class="info-section-title">Contacts</h5>
+            <span class="info-section-title">Contacts</span>
             <span><span class="label">Email:</span> <a href="mailto:tatiana@nerucheva.com">tatiana@nerucheva.com</a>
             </span>
             <span><span class="label">GitHub:</span> <a
@@ -55,7 +57,7 @@
           </div>
 
           <div class="info-section">
-            <h5 class="info-section-title">Languages</h5>
+            <span class="info-section-title">Languages</span>
             <div class="skills__list-wrapper">
               <ul class="skills__list list">
                 <li>English – B2</li>
@@ -65,7 +67,7 @@
           </div>
 
           <div class="info-section">
-            <h5 class="info-section-title">Education</h5>
+            <span class="info-section-title">Education</span>
             <span>SPBU, Bachelor of Philology <br /> Russian language and literature (2009-20014)</span>
           </div>
 
@@ -80,12 +82,12 @@
         </div>
 
         <div class="info-section">
-          <h5 class="info-section-title header-bold">About me</h5>
-          <p>I am a front-end developer with over 3 years of experience in American and European companies.
+          <h3 class="info-section-title">About me</h3>
+          <p>I am a front-end developer with over 3 years of experience at American and European companies.
           </p>
           <p>My skills include HTML, CSS, JavaScript, TypeScript, React, and&nbsp;GraphQL. I&nbsp;am enthusiastic about
-            creating interfaces that meet business requirements and&nbsp;simultaneously provide the&nbsp;most friendly
-            and&nbsp;intuitive user experience.
+            creating interfaces that meet business requirements and&nbsp;simultaneously provide the&nbsp;the friendliest
+            and&nbsp;most intuitive user experience.
           </p>
           <p>
             I implement responsive cross-browser pixel-perfect layouts even without additional mockups and&nbsp;pay
@@ -95,12 +97,12 @@
             interfaces that are both functional and&nbsp;aesthetically pleasing, and&nbsp;build strong
             and&nbsp;efficient communication with design teams.
           </p>
-          <p>I&nbsp;am experienced in working with English-speaking teams and&nbsp;also involved in&nbsp;mentoring.</p>
+          <p>I&nbsp;have experience in working with English-speaking teams and have also partaken in&nbsp;mentoring.</p>
 
         </div>
 
         <div class="info-section">
-          <h5 class="info-section-title header-bold">Professional skills</h5>
+          <h3 class="info-section-title">Professional skills</h3>
           <div class="skills__list-wrapper">
             <ul class="skills__list list">
               <li>HTML</li>
@@ -138,7 +140,7 @@
           <span class="company">Pixel Point</span>
           <div class="position-wrapper">
             <span class="position">Frontend developer</span>
-            <time class="period period_mobile"></time>
+            <time class="period"></time>
           </div>
 
           <p>I&nbsp;participate in&nbsp;website development for&nbsp;several technology companies using Gatsby, Next.js,
@@ -153,7 +155,7 @@
                 GraphQL. Created the project <a href="https://isovalent.com/resource-library/" target="_blank"
                   rel="noopener noreferrer">knowledge base</a>, integrated a search engine, and implemented a
                 content filtering system.
-                Optimized several project pages according to Lighthouse recommendations up to 97% performance.
+                Optimised several project pages up to 97% performance according to Lighthouse recommendations.
               </p>
             </li>
 
@@ -173,7 +175,7 @@
 
             <li>
               <p>
-                As part of the mentoring program, I&nbsp;trained two people in responsive valid cross-browser markup.
+                As a part of the mentoring program, I&nbsp;trained two people in responsive valid cross-browser markup.
               </p>
             </li>
 
@@ -211,7 +213,7 @@
           <span class="company">JSNAKE</span>
           <div class="position-wrapper">
             <span class="position">Frontend developer</span>
-            <time class="period period_mobile"></time>
+            <time class="period"></time>
           </div>
 
           <p>I&nbsp;worked on product startups <a href="https://sammy.expert/" target="_blank"
@@ -245,7 +247,7 @@
 
             <li>
               <p>
-                Added internationalization support to the&nbsp;<a href="https://lovefromyours.com/" target="_blank"
+                Added internationalisation support to the&nbsp;<a href="https://lovefromyours.com/" target="_blank"
                   rel="noopener noreferrer">Yours</a> project. Using the&nbsp;Intl API, I&nbsp;implemented user language
                 recognition and introduced support for versions in two languages (en-gb, en-us). Also, to&nbsp;simplify
                 support and optimize the&nbsp;work of the&nbsp;project, I&nbsp;migrated it to TypeScript.
@@ -288,10 +290,10 @@
           <span class="company">Freelance</span>
           <div class="position-wrapper">
             <span class="position">Frontend developer</span>
-            <time class="period period_mobile"></time>
+            <time class="period"></time>
           </div>
 
-          <p>I&nbsp;designed responsive layouts for landing pages and marketing materials, and I&nbsp;also developed the
+          <p>I&nbsp;designed responsive layouts for landing pages and marketing materials, and also developed the
             UI design.</p>
 
           <span class="info-subtitle">Skills</span>
