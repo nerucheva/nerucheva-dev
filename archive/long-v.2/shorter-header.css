@@ -1,0 +1,172 @@
+.language-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 10px;
+}
+
+.button-block {
+  margin-top: 0;
+}
+
+.left-col {
+  width: 45%;
+  border-right: 2px solid var(--GRAY);
+  padding: 0 24px 0 0;
+  box-sizing: border-box;
+}
+
+.right-col {
+  width: 55%;
+  padding: 0 0 0 24px;
+  box-sizing: border-box;
+}
+
+.header-content {
+  justify-content: start;
+  padding-bottom: 30px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 0;
+}
+
+.name {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--GRAY);
+}
+
+.skills {
+  padding-top: 0;
+}
+
+.about-me {
+  padding-top: 20px;
+}
+
+.skills__list {
+  padding: 0;
+}
+
+.info-section p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.info-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.position-wrapper {
+  display: flex;
+  margin: 4px 0 20px;
+}
+
+.position {
+  margin: 0;
+}
+
+.period_desktop {
+  display: none !important;
+}
+
+.period_mobile {
+  display: flex !important;
+  flex-direction: row;
+  width: auto;
+  margin-left: 6px;
+}
+
+.period_mobile::before {
+  content: '|';
+  display: block;
+  margin-right: 6px;
+}
+
+.period span {
+  margin-top: 0;
+  margin-left: 6px;
+}
+
+@media print {
+  .language-bar {
+    display: none;
+  }
+
+  .header-content {
+    padding-top: 0;
+  }
+
+  .photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-me h3 {
+    margin-top: 0;
+  }
+
+  * {
+    font-size: var(--FS-14);
+  }
+
+  .skills__list {
+    margin-left: -21px;
+  }
+
+  .info-section-title {
+    font-size: var(--FS-16);
+  }
+
+  .name {
+    padding-bottom: 14px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h3,
+  .company {
+    font-size: var(--FS-20);
+  }
+
+  .position-wrapper {
+    margin: 4px 0 0px;
+  }
+
+  .position {
+    margin: 0 !important;
+  }
+
+  p,
+  li {
+    margin: 8px 0;
+  }
+
+  .info-section p:first-of-type {
+    margin-top: 0;
+  }
+
+  .info-section p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .info-subtitle {
+    margin: 14px 0 2px;
+  }
+
+  .skills__list-wrapper {
+    margin-top: -4px;
+  }
+
+  .skills__list li {
+    margin-top: 2px;
+  }
+
+  .general-info {
+    padding-top: 14px;
+  }
+}
