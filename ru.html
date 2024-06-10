@@ -32,21 +32,23 @@
     <section class="header-content">
       <div class="left-col">
         <div class="name">
-          <h1>Татьяна Неручева</h1>
-          <h2>Frontend-разработчица</h2>
+          <h1>
+            <span class="title">Татьяна Неручева</span>
+            <span class="subtitle">Frontend-разработчица</span>
+          </h1>
         </div>
 
         <img class="photo" src="./assets/photo.jpg" alt="Tatiana Nerucheva" width="200" height="200">
 
         <div class="general-info">
           <div class="info-section">
-            <span class="info-section-title">Местоположение</span>
+            <h2 class="info-section-title">Местоположение</h2>
             <span><span class="label">Проживание:</span> Черногория, Тиват</span>
             <span><span class="label">Готовность к&nbsp;работе:</span> готова к&nbsp;удаленной работе</span>
           </div>
 
           <div class="info-section">
-            <span class="info-section-title">Контактная информация</span>
+            <h2 class="info-section-title">Контактная информация</h2>
             <span><span class="label">Email:</span> <a href="mailto:tatiana@nerucheva.com">tatiana@nerucheva.com</a>
             </span>
             <span><span class="label">GitHub:</span> <a
@@ -56,7 +58,7 @@
           </div>
 
           <div class="info-section">
-            <span class="info-section-title">Языки</span>
+            <h2 class="info-section-title">Языки</h2>
             <div class="skills__list-wrapper">
               <ul class="skills__list list">
                 <li>Английский – B2</li>
@@ -66,7 +68,7 @@
           </div>
 
           <div class="info-section">
-            <span class="info-section-title">Образование</span>
+            <h2 class="info-section-title">Образование</h2>
             <span>СПбГУ, бакалавр филологии <br /> Русский язык и литература (2009-20014)</span>
           </div>
 
@@ -76,12 +78,14 @@
 
       <div class="right-col">
         <div class="name">
-          <h1>Татьяна Неручева</h1>
-          <h2>Frontend-разработчица</h2>
+          <h1>
+            <span class="title">Татьяна Неручева</span>
+            <span class="subtitle">Frontend-разработчица</span>
+          </h1>
         </div>
 
         <div class="info-section">
-          <h3 class="info-section-title">Обо мне</h3>
+          <h2 class="info-section-title">Обо мне</h2>
           <p>Frontend-разработчица c 3+ годами опыта работы на американские и европейские компании.
           </p>
           <p>Стек: HTML, CSS, JavaScript, TypeScript, React и GraphQL. Моя цель – разработка интерфейсов, которые
@@ -99,7 +103,7 @@
         </div>
 
         <div class="info-section">
-          <h3 class="info-section-title">Профессиональные навыки</h3>
+          <h2 class="info-section-title">Профессиональные навыки</h2>
           <div class="skills__list-wrapper">
             <ul class="skills__list list">
               <li>HTML</li>
@@ -131,18 +135,75 @@
     </section>
 
     <section>
-      <h3>Опыт работы</h3>
+      <h2 class="experience-title">Опыт работы</h2>
 
-      <div class="position-info" data-date-start="2022-08-01">
+      <div class="position-info" data-date-start="2023-07-01">
 
         <div class="details">
-          <span class="company">Pixel Point</span>
+          <h3 class="company">Sinehus</h3>
           <div class="position-wrapper">
             <span class="position">Frontend-разработчица</span>
             <time class="period"></time>
           </div>
 
-          <p>Участвую в&nbsp;разработке сайтов для&nbsp;ряда технологических компаний с&nbsp;использованием Gatsby,
+          <p>В рамках проектного сотрудничества занимаюсь развитием и поддержкой дизайн-системы трейдинговой
+            платформы.
+          </p>
+
+          <ul class="list details-list list_paragraphs">
+            <li>
+              <p>
+                Провела ревизию проекта на соответсвие макетам и протестировала интерфейсы.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Провела редизайн дизайн-системы, построенной на базе Ant Design UI Kit.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Пишу бизнес-логику, занимаюсь рефакторингом кодовой базы, исправляю UI и UX баги, создаю
+                Storybook stories для
+                компонентов.
+              </p>
+            </li>
+
+          </ul>
+
+          <h4 class="info-subtitle">Используемые навыки</h4>
+          <div class="skills__list-wrapper">
+            <ul class="skills__list list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Vite</li>
+              <li>Storybook</li>
+              <li>Ant Design</li>
+              <li>CSS modules</li>
+              <li>Адаптивная верстка</li>
+              <li>Atomic Design</li>
+              <li>Figma Design</li>
+              <li>Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-info" data-date-start="2022-08-01" data-date-end="2023-07-01">
+
+        <div class="details">
+          <h3 class="company">Pixel Point</h3>
+          <div class="position-wrapper">
+            <span class="position">Frontend-разработчица</span>
+            <time class="period"></time>
+          </div>
+
+          <p>Участвовала в&nbsp;разработке сайтов для&nbsp;ряда технологических компаний с&nbsp;использованием Gatsby,
             Next.js и&nbsp;Tailwind.
           </p>
 
@@ -181,15 +242,15 @@
 
             <li>
               <p>
-                С моим участием было запущено три проекта. Также я создаю качественную адаптивную кроссбраузерную
-                верстку, осуществляю техническую поддержку клиента на английском языке, пишу
-                документацию к новой функциональности, исправляю баги и улучшаю для клиента user experience работы с
+                С моим участием было запущено три проекта. Также я создавала качественную адаптивную кроссбраузерную
+                верстку, осуществляла техническую поддержку клиента на английском языке, писала
+                документацию к новой функциональности, исправляла баги и улучшала для клиента user experience работы с
                 сайтом в CMS.
               </p>
             </li>
           </ul>
 
-          <span class="info-subtitle">Используемые навыки</span>
+          <h4 class="info-subtitle">Используемые навыки</h4>
           <div class="skills__list-wrapper">
             <ul class="skills__list list">
               <li>HTML</li>
@@ -211,7 +272,7 @@
       <div class="position-info" data-date-start="2021-05-01" data-date-end="2022-08-01">
 
         <div class="details">
-          <span class="company">JSNAKE</span>
+          <h3 class="company">JSNAKE</h3>
           <div class="position-wrapper">
             <span class="position">Frontend-разработчица</span>
             <time class="period"></time>
@@ -261,7 +322,7 @@
               пользовательского опыта.</li>
           </ul>
 
-          <span class="info-subtitle">Используемые навыки</span>
+          <h4 class="info-subtitle">Используемые навыки</h4>
           <div class="skills__list-wrapper">
             <ul class="skills__list list">
               <li>HTML</li>
@@ -283,7 +344,7 @@
       <div class="position-info" data-date-start="2020-06-01" data-date-end="2021-05-01">
 
         <div class="details non-breakable">
-          <span class="company">Freelance</span>
+          <h3 class="company">Freelance</h3>
           <div class="position-wrapper">
             <span class="position">Frontend-разработчица</span>
             <time class="period"></time>
@@ -292,7 +353,7 @@
           <p>Занималась версткой адаптивных лендингов и&nbsp;созданием маркетинговых материалов. Также занималась
             UI-дизайном.</p>
 
-          <span class="info-subtitle">Используемые навыки</span>
+          <h4 class="info-subtitle">Используемые навыки</h4>
           <div class="skills__list-wrapper">
             <ul class="skills__list list">
               <li>HTML</li>

@@ -64,19 +64,21 @@ li {
   list-style-type: none;
 }
 
-h1 {
+h1 .title {
+  display: block;
   font-size: var(--FS-36);
   line-height: 100%;
 }
 
-h2 {
+h1 .subtitle {
+  display: block;
   font-size: var(--FS-18);
   line-height: 100%;
   font-weight: 400;
   margin-top: 8px;
 }
 
-h3:not(h3.info-section-title) {
+h2.experience-title {
   font-size: var(--FS-22);
   line-height: 100%;
   padding: 8px 0;
