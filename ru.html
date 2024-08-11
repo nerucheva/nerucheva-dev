@@ -19,13 +19,16 @@
       <span><a href="./index.html">EN</a> / RU</span>
 
       <div class="button-block">
+        <button class="pdf-button" type="button" onclick="window.print()">Download as PDF</button>
+
         <div class="tooltip">
-          <!-- TODO: make the tooltip accessible -->
-          <span class="tooltip__icon" tabindex="0">?</span>
-          <div class="tooltip__text">Вы можете распечатать эту страницу или сохранить ее как&nbsp;PDF, выбрав
-            «Сохранить как&nbsp;PDF» в&nbsp;поле выбра принтера</div>
+          <button class="tooltip__btn" aria-describedby="tooltip-description">
+            ?
+          </button>
+
+          <div class="tooltip__txt">You may print this page or&nbsp;download it as&nbsp;PDF by&nbsp;choosing «Save
+            as&nbsp;PDF» in the&nbsp;«printer» select</div>
         </div>
-        <button class="pdf-button" type="button" onclick="window.print()">Скачать PDF</button>
       </div>
     </div>
 

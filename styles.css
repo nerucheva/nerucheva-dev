@@ -118,39 +118,52 @@ h2.experience-title {
   height: 20px;
 }
 
-.tooltip__icon {
+.tooltip__btn {
   display: block;
   width: 20px;
   height: 20px;
   box-sizing: border-box;
   font-size: var(--FS-14);
   line-height: 1;
-  padding-top: 2px;
-  padding-left: 6px;
   border: 1px solid var(--BLACK);
   border-radius: 50%;
   background-color: var(--WHITE);
   cursor: pointer;
 }
 
-.tooltip__text {
+.tooltip__txt {
   position: absolute;
-  z-index: -1;
   right: 18px;
-  width: 260px;
+  top: calc(100% + 5px);
+  z-index: 3;
   padding: 10px;
   font-size: var(--FS-14);
-  background-color: var(--GRAY-LIGHT);
+  color: var(--GRAY-LIGHT);
+  background-color: var(--BLACK);
   border-radius: 2px;
+  width: 260px;
   opacity: 0;
-  transition: 0.2s;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* TODO: fix .tooltip:focus .tooltip__text  doesn't trigger the styles change */
-.tooltip:hover .tooltip__text,
-.tooltip:focus .tooltip__text {
-  z-index: 1;
+.tooltip__btn:hover + .tooltip__txt {
   opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tooltip__btn:focus + .tooltip__txt {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
 }
 
 .pdf-button {
